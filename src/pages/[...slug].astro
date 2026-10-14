@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+import ServiceLandingExtras from '../components/ServiceLandingExtras.astro';
+import { loadPages, slugOf, injectForm, formatDate } from '../lib/pages.js';
+
+export function getStaticPaths() {
+  return loadPages()
+    .filter((p: any) => !p.redirectedTo)
+    .map((p: any) => ({
+      params: { slug: p.path === '/' ? undefined : decodeURIComponent(p.path).replace(/^\/|\/$/g, '') },
+      props: { page: p },
+    }));
+}
+
+const { page } = Astro.props;
+const isHome = page.path === '/';
+const html = injectForm(page.html, page.path);
+const showHero = !isHome && !page.h1InContent;
+const published = page.type === 'post' ? formatDate(page.og?.find(([k]: [string, string]) => k === 'article:published_time')?.[1]) : null;
+const heroTitle = page.h1 || page.title;
+const isServiceLanding = !isHome && page.path.startsWith('/aluguel-') && page.path !== '/servicos/';
+const isEquipe = page.path === '/equipe/';
+const isCases = page.path === '/cases/';
+const isSobreNos = page.path === '/sobre-nos/';
+const isContato = page.path === '/contato/';
+---
+<Base page={page}>
+  {showHero && (
+    <header class="page-hero">
+      <div class="page-hero-inner">
+        {page.type === 'post' && page.path !== '/blog/' && <p class="eyebrow">Blog</p>}
+        <h1>{heroTitle}</h1>
+        {published && <p class="hero-meta">Publicado em {published}</p>}
+      </div>
+    </header>
+  )}
+  <main id="main" class:list={['prose', isHome ? 'prose--home' : 'prose--page', `type-${page.type}`, isServiceLanding && 'is-service-page', isEquipe && 'page-equipe', isCases && 'page-cases', isSobreNos && 'page-sobre-nos', isContato && 'page-contato']}>
+    <Fragment set:html={html} />
+    {isServiceLanding && <ServiceLandingExtras page={page} />}
+  </main>
+</Base>

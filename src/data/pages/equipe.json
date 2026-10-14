@@ -1,0 +1,93 @@
+{
+ "url": "https://alugueldevansp.com/equipe/",
+ "path": "/equipe/",
+ "type": "page",
+ "lastmod": "2025-08-20T03:14:56+00:00",
+ "redirectedTo": null,
+ "title": "Equipe - aluguel de van sp",
+ "description": "Conheça nossa equipe! Profissionais dedicados que garantem conforto, segurança e qualidade em cada viagem pela Aluguel de Van SP.",
+ "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+ "canonical": "https://alugueldevansp.com/equipe/",
+ "og": [
+  [
+   "og:locale",
+   "pt_BR"
+  ],
+  [
+   "og:type",
+   "article"
+  ],
+  [
+   "og:title",
+   "Equipe - aluguel de van sp"
+  ],
+  [
+   "og:description",
+   "Conheça nossa equipe! Profissionais dedicados que garantem conforto, segurança e qualidade em cada viagem pela Aluguel de Van SP."
+  ],
+  [
+   "og:url",
+   "https://alugueldevansp.com/equipe/"
+  ],
+  [
+   "og:site_name",
+   "aluguel de van sp"
+  ],
+  [
+   "og:updated_time",
+   "2025-08-20T03:14:56+00:00"
+  ],
+  [
+   "og:image",
+   "http://alugueldevansp.com/wp-content/uploads/2025/08/Andre-Lima-683x1024.webp"
+  ],
+  [
+   "og:image:alt",
+   "Equipe"
+  ],
+  [
+   "article:published_time",
+   "2025-08-20T03:12:34+00:00"
+  ],
+  [
+   "article:modified_time",
+   "2025-08-20T03:14:56+00:00"
+  ]
+ ],
+ "twitter": [
+  [
+   "twitter:card",
+   "summary_large_image"
+  ],
+  [
+   "twitter:title",
+   "Equipe - aluguel de van sp"
+  ],
+  [
+   "twitter:description",
+   "Conheça nossa equipe! Profissionais dedicados que garantem conforto, segurança e qualidade em cada viagem pela Aluguel de Van SP."
+  ],
+  [
+   "twitter:image",
+   "http://alugueldevansp.com/wp-content/uploads/2025/08/Andre-Lima-683x1024.webp"
+  ],
+  [
+   "twitter:label1",
+   "Tempo para leitura"
+  ],
+  [
+   "twitter:data1",
+   "1 minuto"
+  ]
+ ],
+ "jsonld": [
+  "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":[\"AutomotiveBusiness\",\"Organization\"],\"@id\":\"https://alugueldevansp.com/#organization\",\"name\":\"aluguel de van sp\",\"url\":\"https://alugueldevansp.com\",\"logo\":{\"@type\":\"ImageObject\",\"@id\":\"https://alugueldevansp.com/#logo\",\"url\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/cropped-cropped-Logo-aluguel-de-van-sp-sem-fundo.webp\",\"contentUrl\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/cropped-cropped-Logo-aluguel-de-van-sp-sem-fundo.webp\",\"caption\":\"aluguel de van sp\",\"inLanguage\":\"pt-BR\",\"width\":\"512\",\"height\":\"307\"},\"openingHours\":[\"Mo,Tu,We,Th,Fr,Sa,Su 09:00-17:00\"],\"image\":{\"@id\":\"https://alugueldevansp.com/#logo\"}},{\"@type\":\"WebSite\",\"@id\":\"https://alugueldevansp.com/#website\",\"url\":\"https://alugueldevansp.com\",\"name\":\"aluguel de van sp\",\"publisher\":{\"@id\":\"https://alugueldevansp.com/#organization\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"ImageObject\",\"@id\":\"http://alugueldevansp.com/wp-content/uploads/2025/08/Andre-Lima-683x1024.webp\",\"url\":\"http://alugueldevansp.com/wp-content/uploads/2025/08/Andre-Lima-683x1024.webp\",\"width\":\"200\",\"height\":\"200\",\"inLanguage\":\"pt-BR\"},{\"@type\":\"WebPage\",\"@id\":\"https://alugueldevansp.com/equipe/#webpage\",\"url\":\"https://alugueldevansp.com/equipe/\",\"name\":\"Equipe - aluguel de van sp\",\"datePublished\":\"2025-08-20T03:12:34+00:00\",\"dateModified\":\"2025-08-20T03:14:56+00:00\",\"isPartOf\":{\"@id\":\"https://alugueldevansp.com/#website\"},\"primaryImageOfPage\":{\"@id\":\"http://alugueldevansp.com/wp-content/uploads/2025/08/Andre-Lima-683x1024.webp\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"Person\",\"@id\":\"https://alugueldevansp.com/author/edgarseolocalgmail-com/\",\"name\":\"edgarseolocal@gmail.com\",\"url\":\"https://alugueldevansp.com/author/edgarseolocalgmail-com/\",\"image\":{\"@type\":\"ImageObject\",\"@id\":\"https://secure.gravatar.com/avatar/cc75def962b0128d2a4b2727892367fb8a6906ec8cf6850e66125b188a447c64?s=96&amp;d=mm&amp;r=g\",\"url\":\"https://secure.gravatar.com/avatar/cc75def962b0128d2a4b2727892367fb8a6906ec8cf6850e66125b188a447c64?s=96&amp;d=mm&amp;r=g\",\"caption\":\"edgarseolocal@gmail.com\",\"inLanguage\":\"pt-BR\"},\"sameAs\":[\"https://alugueldevansp.com\"],\"worksFor\":{\"@id\":\"https://alugueldevansp.com/#organization\"}},{\"@type\":\"Article\",\"headline\":\"Equipe - aluguel de van sp\",\"datePublished\":\"2025-08-20T03:12:34+00:00\",\"dateModified\":\"2025-08-20T03:14:56+00:00\",\"author\":{\"@id\":\"https://alugueldevansp.com/author/edgarseolocalgmail-com/\",\"name\":\"edgarseolocal@gmail.com\"},\"publisher\":{\"@id\":\"https://alugueldevansp.com/#organization\"},\"description\":\"Conhe\\u00e7a nossa equipe! Profissionais dedicados que garantem conforto, seguran\\u00e7a e qualidade em cada viagem pela Aluguel de Van SP.\",\"name\":\"Equipe - aluguel de van sp\",\"@id\":\"https://alugueldevansp.com/equipe/#richSnippet\",\"isPartOf\":{\"@id\":\"https://alugueldevansp.com/equipe/#webpage\"},\"image\":{\"@id\":\"http://alugueldevansp.com/wp-content/uploads/2025/08/Andre-Lima-683x1024.webp\"},\"inLanguage\":\"pt-BR\",\"mainEntityOfPage\":{\"@id\":\"https://alugueldevansp.com/equipe/#webpage\"}}]}"
+ ],
+ "h1InContent": false,
+ "h1": "Equipe",
+ "featuredImage": null,
+ "hasForm": false,
+ "mode": "entry",
+ "html": "<h2><strong>André Silva – Diretor geral</strong></h2>\n\n\n<div class=\"figure-img\">\n<figure class=\"aligncenter\"><img width=\"683\" height=\"1024\" src=\"/wp-content/uploads/2025/08/Andre-Lima-683x1024.webp\" alt=\"André Lima\" srcset=\"/wp-content/uploads/2025/08/Andre-Lima-683x1024.webp 683w, /wp-content/uploads/2025/08/Andre-Lima-200x300.webp 200w, /wp-content/uploads/2025/08/Andre-Lima-768x1151.webp 768w, /wp-content/uploads/2025/08/Andre-Lima-1025x1536.webp 1025w, /wp-content/uploads/2025/08/Andre-Lima-1366x2048.webp 1366w, /wp-content/uploads/2025/08/Andre-Lima-scaled.webp 1708w\" sizes=\"(max-width: 683px) 100vw, 683px\" loading=\"lazy\"></figure>\n</div>\n\n\n\n\n\n\n<p>Formado em <strong>Administração de Empresas</strong> pela Fundação Getúlio Vargas (FGV), André sempre teve espírito empreendedor. Antes de fundar a Aluguel de Van SP, trabalhou por 8 anos na área de gestão de transportes corporativos em uma grande empresa de turismo. Essa experiência lhe deu a visão estratégica para iniciar seu próprio negócio, unindo gestão eficiente e foco no cliente.</p>\n\n\n\n<hr>\n\n\n\n<h2><strong>Carla Matsumoto – Gerente de operações</strong></h2>\n\n\n<div class=\"figure-img\">\n<figure class=\"aligncenter\"><img width=\"1707\" height=\"2560\" src=\"/wp-content/uploads/2025/08/Carla-Matsumoto-scaled.webp\" alt=\"Carla Matsumoto\" srcset=\"/wp-content/uploads/2025/08/Carla-Matsumoto-scaled.webp 1707w, /wp-content/uploads/2025/08/Carla-Matsumoto-200x300.webp 200w, /wp-content/uploads/2025/08/Carla-Matsumoto-683x1024.webp 683w, /wp-content/uploads/2025/08/Carla-Matsumoto-768x1152.webp 768w, /wp-content/uploads/2025/08/Carla-Matsumoto-1024x1536.webp 1024w, /wp-content/uploads/2025/08/Carla-Matsumoto-1365x2048.webp 1365w\" sizes=\"(max-width: 1707px) 100vw, 1707px\" loading=\"lazy\"></figure>\n</div>\n\n\n\n\n\n\n<p>Graduada em <strong>Logística</strong> pela Universidade Anhembi Morumbi, Carla atuou durante 10 anos no setor de planejamento de rotas e gerenciamento de frotas em empresas de transporte urbano. Sua vivência anterior em grandes operações logísticas trouxe a expertise necessária para estruturar os processos da Aluguel de Van SP, garantindo organização e eficiência em cada viagem.</p>\n\n\n\n<hr>\n\n\n\n<h2><strong>João Pereira – Coordenador de motoristas</strong></h2>\n\n\n<div class=\"figure-img\">\n<figure class=\"aligncenter\"><img loading=\"lazy\" width=\"683\" height=\"1024\" src=\"/wp-content/uploads/2025/08/Joao-Pereira-683x1024.webp\" alt=\"João Pereira\" srcset=\"/wp-content/uploads/2025/08/Joao-Pereira-683x1024.webp 683w, /wp-content/uploads/2025/08/Joao-Pereira-200x300.webp 200w, /wp-content/uploads/2025/08/Joao-Pereira-768x1151.webp 768w, /wp-content/uploads/2025/08/Joao-Pereira-1025x1536.webp 1025w, /wp-content/uploads/2025/08/Joao-Pereira-1367x2048.webp 1367w, /wp-content/uploads/2025/08/Joao-Pereira-scaled.webp 1709w\" sizes=\"(max-width: 683px) 100vw, 683px\"></figure>\n</div>\n\n\n\n\n\n\n<p>Com formação em <strong>Gestão de Pessoas</strong> pelo Senac São Paulo, João iniciou sua trajetória como motorista profissional de turismo, atuando por mais de 12 anos em viagens interestaduais. Sua experiência na estrada e o contato direto com clientes de perfis variados lhe deram sensibilidade e liderança. Hoje, aplica seus conhecimentos para treinar e coordenar a equipe de motoristas da empresa.</p>\n\n\n\n<hr>\n\n\n\n<h2><strong>Fernanda Oliveira – Atendimento ao cliente</strong></h2>\n\n\n<div class=\"figure-img\">\n<figure class=\"aligncenter\"><img loading=\"lazy\" width=\"683\" height=\"1024\" src=\"/wp-content/uploads/2025/08/Fernanda-Oliveira-683x1024.webp\" alt=\"Fernanda Oliveira\" srcset=\"/wp-content/uploads/2025/08/Fernanda-Oliveira-683x1024.webp 683w, /wp-content/uploads/2025/08/Fernanda-Oliveira-200x300.webp 200w, /wp-content/uploads/2025/08/Fernanda-Oliveira-768x1152.webp 768w, /wp-content/uploads/2025/08/Fernanda-Oliveira-1024x1536.webp 1024w, /wp-content/uploads/2025/08/Fernanda-Oliveira-1365x2048.webp 1365w, /wp-content/uploads/2025/08/Fernanda-Oliveira-scaled.webp 1707w\" sizes=\"(max-width: 683px) 100vw, 683px\"></figure>\n</div>\n\n\n\n\n\n\n<p>Formada em <strong>Comunicação Social</strong> com ênfase em Relações Públicas pela Universidade Metodista, Fernanda trabalhou em centrais de atendimento de companhias aéreas por 7 anos antes de entrar na Aluguel de Van SP. Essa bagagem a tornou especialista em relacionamento com clientes, sabendo lidar com situações de alta demanda e garantindo sempre um atendimento humanizado.</p>\n\n\n\n<hr>\n\n\n\n<h2><strong>Marcos Lima – Marketing &amp; Redes Sociais</strong></h2>\n\n\n<div class=\"figure-img\">\n<figure class=\"aligncenter\"><img loading=\"lazy\" width=\"683\" height=\"1024\" src=\"/wp-content/uploads/2025/08/Marcos-Lima-683x1024.webp\" alt=\"Marcos Lima\" srcset=\"/wp-content/uploads/2025/08/Marcos-Lima-683x1024.webp 683w, /wp-content/uploads/2025/08/Marcos-Lima-200x300.webp 200w, /wp-content/uploads/2025/08/Marcos-Lima-768x1152.webp 768w, /wp-content/uploads/2025/08/Marcos-Lima-1024x1536.webp 1024w, /wp-content/uploads/2025/08/Marcos-Lima-1366x2048.webp 1366w, /wp-content/uploads/2025/08/Marcos-Lima-scaled.webp 1707w\" sizes=\"(max-width: 683px) 100vw, 683px\"></figure>\n</div>\n\n\n\n\n\n\n<p>Graduado em <strong>Publicidade e Propaganda</strong> pela ESPM, Marcos acumula mais de 9 anos de experiência em marketing digital. Antes de integrar a equipe, trabalhou em agências de publicidade e startups, onde desenvolveu campanhas para marcas nacionais. Hoje, aplica todo seu conhecimento para fortalecer a presença da empresa online e aproximar ainda mais os clientes.</p>\n\n\n\n<hr>\n\n\n\n<h2><strong>Patrícia Gomes – Supervisora de manutenção</strong></h2>\n\n\n<div class=\"figure-img\">\n<figure class=\"aligncenter\"><img loading=\"lazy\" width=\"683\" height=\"1024\" src=\"/wp-content/uploads/2025/08/Patricia-Gomes-683x1024.webp\" alt=\"Patrícia Gomes\" srcset=\"/wp-content/uploads/2025/08/Patricia-Gomes-683x1024.webp 683w, /wp-content/uploads/2025/08/Patricia-Gomes-200x300.webp 200w, /wp-content/uploads/2025/08/Patricia-Gomes-768x1152.webp 768w, /wp-content/uploads/2025/08/Patricia-Gomes-1024x1536.webp 1024w, /wp-content/uploads/2025/08/Patricia-Gomes-1365x2048.webp 1365w, /wp-content/uploads/2025/08/Patricia-Gomes-scaled.webp 1707w\" sizes=\"(max-width: 683px) 100vw, 683px\"></figure>\n</div>\n\n\n\n\n\n\n<p>Técnica em <strong>Mecânica Automotiva</strong> pelo SENAI, Patrícia tem mais de 15 anos de experiência em manutenção de veículos pesados e de transporte de passageiros. Atuou em concessionárias de vans e ônibus, onde se especializou em segurança veicular e revisões preventivas. Na Aluguel de Van SP, sua experiência é essencial para manter a frota sempre moderna, segura e em perfeito estado.</p>",
+ "crawledAt": "2026-10-04T01:18:50.524Z"
+}

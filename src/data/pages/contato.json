@@ -1,0 +1,109 @@
+{
+ "url": "https://alugueldevansp.com/contato/",
+ "path": "/contato/",
+ "type": "page",
+ "lastmod": "2026-03-18T14:48:24+00:00",
+ "redirectedTo": null,
+ "title": "Contato - aluguel de van sp",
+ "description": "Av. Magalhães de Castro, 12.000 - Cidade Jardim, São Paulo - SP, 05502-001",
+ "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+ "canonical": "https://alugueldevansp.com/contato/",
+ "og": [
+  [
+   "og:locale",
+   "pt_BR"
+  ],
+  [
+   "og:type",
+   "article"
+  ],
+  [
+   "og:title",
+   "Contato - aluguel de van sp"
+  ],
+  [
+   "og:description",
+   "Av. Magalhães de Castro, 12.000 - Cidade Jardim, São Paulo - SP, 05502-001"
+  ],
+  [
+   "og:url",
+   "https://alugueldevansp.com/contato/"
+  ],
+  [
+   "og:site_name",
+   "aluguel de van sp"
+  ],
+  [
+   "og:updated_time",
+   "2026-03-18T14:48:24+00:00"
+  ],
+  [
+   "og:image",
+   "https://alugueldevansp.com/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp"
+  ],
+  [
+   "og:image:secure_url",
+   "https://alugueldevansp.com/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp"
+  ],
+  [
+   "og:image:width",
+   "500"
+  ],
+  [
+   "og:image:height",
+   "500"
+  ],
+  [
+   "og:image:alt",
+   "Logo aluguel de van sp sem fundo"
+  ],
+  [
+   "og:image:type",
+   "image/webp"
+  ],
+  [
+   "article:published_time",
+   "2022-01-21T21:54:03+00:00"
+  ],
+  [
+   "article:modified_time",
+   "2026-03-18T14:48:24+00:00"
+  ]
+ ],
+ "twitter": [
+  [
+   "twitter:card",
+   "summary_large_image"
+  ],
+  [
+   "twitter:title",
+   "Contato - aluguel de van sp"
+  ],
+  [
+   "twitter:description",
+   "Av. Magalhães de Castro, 12.000 - Cidade Jardim, São Paulo - SP, 05502-001"
+  ],
+  [
+   "twitter:image",
+   "https://alugueldevansp.com/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp"
+  ],
+  [
+   "twitter:label1",
+   "Tempo para leitura"
+  ],
+  [
+   "twitter:data1",
+   "Menos de um minuto"
+  ]
+ ],
+ "jsonld": [
+  "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":[\"AutomotiveBusiness\",\"Organization\"],\"@id\":\"https://alugueldevansp.com/#organization\",\"name\":\"aluguel de van sp\",\"url\":\"https://alugueldevansp.com\",\"logo\":{\"@type\":\"ImageObject\",\"@id\":\"https://alugueldevansp.com/#logo\",\"url\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/cropped-cropped-Logo-aluguel-de-van-sp-sem-fundo.webp\",\"contentUrl\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/cropped-cropped-Logo-aluguel-de-van-sp-sem-fundo.webp\",\"caption\":\"aluguel de van sp\",\"inLanguage\":\"pt-BR\",\"width\":\"512\",\"height\":\"307\"},\"openingHours\":[\"Mo,Tu,We,Th,Fr,Sa,Su 09:00-17:00\"],\"image\":{\"@id\":\"https://alugueldevansp.com/#logo\"}},{\"@type\":\"WebSite\",\"@id\":\"https://alugueldevansp.com/#website\",\"url\":\"https://alugueldevansp.com\",\"name\":\"aluguel de van sp\",\"publisher\":{\"@id\":\"https://alugueldevansp.com/#organization\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"ImageObject\",\"@id\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp\",\"url\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp\",\"width\":\"500\",\"height\":\"500\",\"caption\":\"Logo aluguel de van sp sem fundo\",\"inLanguage\":\"pt-BR\"},{\"@type\":\"WebPage\",\"@id\":\"https://alugueldevansp.com/contato/#webpage\",\"url\":\"https://alugueldevansp.com/contato/\",\"name\":\"Contato - aluguel de van sp\",\"datePublished\":\"2022-01-21T21:54:03+00:00\",\"dateModified\":\"2026-03-18T14:48:24+00:00\",\"isPartOf\":{\"@id\":\"https://alugueldevansp.com/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"Person\",\"@id\":\"https://alugueldevansp.com/author/edgarseolocalgmail-com/\",\"name\":\"edgarseolocal@gmail.com\",\"url\":\"https://alugueldevansp.com/author/edgarseolocalgmail-com/\",\"image\":{\"@type\":\"ImageObject\",\"@id\":\"https://secure.gravatar.com/avatar/cc75def962b0128d2a4b2727892367fb8a6906ec8cf6850e66125b188a447c64?s=96&amp;d=mm&amp;r=g\",\"url\":\"https://secure.gravatar.com/avatar/cc75def962b0128d2a4b2727892367fb8a6906ec8cf6850e66125b188a447c64?s=96&amp;d=mm&amp;r=g\",\"caption\":\"edgarseolocal@gmail.com\",\"inLanguage\":\"pt-BR\"},\"sameAs\":[\"https://alugueldevansp.com\"],\"worksFor\":{\"@id\":\"https://alugueldevansp.com/#organization\"}},{\"@type\":\"Article\",\"headline\":\"Contato - aluguel de van sp\",\"datePublished\":\"2022-01-21T21:54:03+00:00\",\"dateModified\":\"2026-03-18T14:48:24+00:00\",\"author\":{\"@id\":\"https://alugueldevansp.com/author/edgarseolocalgmail-com/\",\"name\":\"edgarseolocal@gmail.com\"},\"publisher\":{\"@id\":\"https://alugueldevansp.com/#organization\"},\"description\":\"Av. Magalh\\u00e3es de Castro, 12.000 - Cidade Jardim, S\\u00e3o Paulo - SP, 05502-001\",\"name\":\"Contato - aluguel de van sp\",\"@id\":\"https://alugueldevansp.com/contato/#richSnippet\",\"isPartOf\":{\"@id\":\"https://alugueldevansp.com/contato/#webpage\"},\"image\":{\"@id\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp\"},\"inLanguage\":\"pt-BR\",\"mainEntityOfPage\":{\"@id\":\"https://alugueldevansp.com/contato/#webpage\"}}]}"
+ ],
+ "h1InContent": false,
+ "h1": "Contato",
+ "featuredImage": null,
+ "hasForm": false,
+ "mode": "entry",
+ "html": "<section>\n<div>\n<div>\n<div>\n<h2><span>Local</span></h2>\n\n\n\n<p>Av. Magalhães de Castro, 12.000 – Cidade Jardim, São Paulo – SP, 05502-001</p>\n</div>\n\n\n\n<div>\n<h2><span>Telefone</span></h2>\n\n\n\n<p><a href=\"tel:+55 011 97543120\">+11 </a><a href=\"tel:+11 97541-3120\">97541-3120</a></p>\n</div>\n\n\n\n<div>\n<h2><span>E-mail</span></h2>\n\n\n\n<p><a href=\"mailto:contato@alugueldevansp.com\">contato@alugueldevansp.com</a></p>\n</div>\n</div>\n\n\n\n<h3><a href=\"/solicite-um-orcamento\">Entrar em contato</a></h3>\n</div>\n</section>",
+ "crawledAt": "2026-10-04T00:44:39.868Z"
+}

@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+
+const page = {
+  path: '/404/',
+  title: 'Página não encontrada - aluguel de van sp',
+  description: 'A página que você procura não foi encontrada.',
+  robots: 'noindex, follow',
+  canonical: null,
+  og: [],
+  twitter: [],
+  jsonld: [],
+};
+---
+<Base page={page}>
+  <header class="page-hero">
+    <div class="page-hero-inner">
+      <h1>Página não encontrada</h1>
+    </div>
+  </header>
+  <main id="main" class="prose prose--page">
+    <p>O endereço que você acessou não existe ou foi movido. Volte para a <a href="/">página inicial</a> ou peça um orçamento.</p>
+    <p><a class="btn" href="/solicite-um-orcamento" rel="nofollow">Entrar em contato</a></p>
+  </main>
+</Base>

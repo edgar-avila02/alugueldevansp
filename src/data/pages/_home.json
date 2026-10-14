@@ -1,0 +1,117 @@
+{
+ "url": "https://alugueldevansp.com/",
+ "path": "/",
+ "type": "page",
+ "lastmod": "2026-04-08T01:29:08+00:00",
+ "redirectedTo": null,
+ "title": "Home - aluguel de van sp",
+ "description": "Alugue a van perfeita para sua viagem ou evento em São Paulo. Oferecemos veículos confortáveis, seguros e equipados com tudo o que você precisa. Seja para",
+ "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+ "canonical": "https://alugueldevansp.com/",
+ "og": [
+  [
+   "og:locale",
+   "pt_BR"
+  ],
+  [
+   "og:type",
+   "website"
+  ],
+  [
+   "og:title",
+   "Home - aluguel de van sp"
+  ],
+  [
+   "og:description",
+   "Alugue a van perfeita para sua viagem ou evento em São Paulo. Oferecemos veículos confortáveis, seguros e equipados com tudo o que você precisa. Seja para"
+  ],
+  [
+   "og:url",
+   "https://alugueldevansp.com/"
+  ],
+  [
+   "og:site_name",
+   "aluguel de van sp"
+  ],
+  [
+   "og:updated_time",
+   "2026-04-08T01:29:08+00:00"
+  ],
+  [
+   "og:image",
+   "https://alugueldevansp.com/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp"
+  ],
+  [
+   "og:image:secure_url",
+   "https://alugueldevansp.com/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp"
+  ],
+  [
+   "og:image:width",
+   "500"
+  ],
+  [
+   "og:image:height",
+   "500"
+  ],
+  [
+   "og:image:alt",
+   "Logo aluguel de van sp sem fundo"
+  ],
+  [
+   "og:image:type",
+   "image/webp"
+  ],
+  [
+   "article:published_time",
+   "2022-01-21T21:52:10+00:00"
+  ],
+  [
+   "article:modified_time",
+   "2026-04-08T01:29:08+00:00"
+  ]
+ ],
+ "twitter": [
+  [
+   "twitter:card",
+   "summary_large_image"
+  ],
+  [
+   "twitter:title",
+   "Home - aluguel de van sp"
+  ],
+  [
+   "twitter:description",
+   "Alugue a van perfeita para sua viagem ou evento em São Paulo. Oferecemos veículos confortáveis, seguros e equipados com tudo o que você precisa. Seja para"
+  ],
+  [
+   "twitter:image",
+   "https://alugueldevansp.com/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp"
+  ],
+  [
+   "twitter:label1",
+   "Escrito por"
+  ],
+  [
+   "twitter:data1",
+   "edgarseolocal@gmail.com"
+  ],
+  [
+   "twitter:label2",
+   "Tempo para leitura"
+  ],
+  [
+   "twitter:data2",
+   "2 minutos"
+  ]
+ ],
+ "jsonld": [
+  "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":[\"AutomotiveBusiness\",\"Organization\"],\"@id\":\"https://alugueldevansp.com/#organization\",\"name\":\"aluguel de van sp\",\"url\":\"https://alugueldevansp.com\",\"logo\":{\"@type\":\"ImageObject\",\"@id\":\"https://alugueldevansp.com/#logo\",\"url\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/cropped-cropped-Logo-aluguel-de-van-sp-sem-fundo.webp\",\"contentUrl\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/cropped-cropped-Logo-aluguel-de-van-sp-sem-fundo.webp\",\"caption\":\"aluguel de van sp\",\"inLanguage\":\"pt-BR\",\"width\":\"512\",\"height\":\"307\"},\"openingHours\":[\"Mo,Tu,We,Th,Fr,Sa,Su 09:00-17:00\"],\"image\":{\"@id\":\"https://alugueldevansp.com/#logo\"}},{\"@type\":\"WebSite\",\"@id\":\"https://alugueldevansp.com/#website\",\"url\":\"https://alugueldevansp.com\",\"name\":\"aluguel de van sp\",\"publisher\":{\"@id\":\"https://alugueldevansp.com/#organization\"},\"inLanguage\":\"pt-BR\",\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://alugueldevansp.com/?s={search_term_string}\",\"query-input\":\"required name=search_term_string\"}},{\"@type\":\"ImageObject\",\"@id\":\"http://alugueldevansp.com/wp-content/uploads/2025/07/Logo-EMTU.webp\",\"url\":\"http://alugueldevansp.com/wp-content/uploads/2025/07/Logo-EMTU.webp\",\"width\":\"200\",\"height\":\"200\",\"inLanguage\":\"pt-BR\"},{\"@type\":\"WebPage\",\"@id\":\"https://alugueldevansp.com/#webpage\",\"url\":\"https://alugueldevansp.com/\",\"name\":\"Home - aluguel de van sp\",\"datePublished\":\"2022-01-21T21:52:10+00:00\",\"dateModified\":\"2026-04-08T01:29:08+00:00\",\"about\":{\"@id\":\"https://alugueldevansp.com/#organization\"},\"isPartOf\":{\"@id\":\"https://alugueldevansp.com/#website\"},\"primaryImageOfPage\":{\"@id\":\"http://alugueldevansp.com/wp-content/uploads/2025/07/Logo-EMTU.webp\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"Person\",\"@id\":\"https://alugueldevansp.com/author/edgarseolocalgmail-com/\",\"name\":\"edgarseolocal@gmail.com\",\"url\":\"https://alugueldevansp.com/author/edgarseolocalgmail-com/\",\"image\":{\"@type\":\"ImageObject\",\"@id\":\"https://secure.gravatar.com/avatar/cc75def962b0128d2a4b2727892367fb8a6906ec8cf6850e66125b188a447c64?s=96&amp;d=mm&amp;r=g\",\"url\":\"https://secure.gravatar.com/avatar/cc75def962b0128d2a4b2727892367fb8a6906ec8cf6850e66125b188a447c64?s=96&amp;d=mm&amp;r=g\",\"caption\":\"edgarseolocal@gmail.com\",\"inLanguage\":\"pt-BR\"},\"sameAs\":[\"https://alugueldevansp.com\"],\"worksFor\":{\"@id\":\"https://alugueldevansp.com/#organization\"}},{\"@type\":\"Article\",\"headline\":\"Home - aluguel de van sp\",\"datePublished\":\"2022-01-21T21:52:10+00:00\",\"dateModified\":\"2026-04-08T01:29:08+00:00\",\"author\":{\"@id\":\"https://alugueldevansp.com/author/edgarseolocalgmail-com/\",\"name\":\"edgarseolocal@gmail.com\"},\"publisher\":{\"@id\":\"https://alugueldevansp.com/#organization\"},\"description\":\"Alugue a van perfeita para sua viagem ou evento em S\\u00e3o Paulo. Oferecemos ve\\u00edculos confort\\u00e1veis, seguros e equipados com tudo o que voc\\u00ea precisa. Seja para\",\"name\":\"Home - aluguel de van sp\",\"@id\":\"https://alugueldevansp.com/#richSnippet\",\"isPartOf\":{\"@id\":\"https://alugueldevansp.com/#webpage\"},\"image\":{\"@id\":\"http://alugueldevansp.com/wp-content/uploads/2025/07/Logo-EMTU.webp\"},\"inLanguage\":\"pt-BR\",\"mainEntityOfPage\":{\"@id\":\"https://alugueldevansp.com/#webpage\"}}]}"
+ ],
+ "h1InContent": true,
+ "h1": "Procurando em alugar vans em São Paulo?",
+ "featuredImage": null,
+ "hasForm": false,
+ "mode": "entry",
+ "html": "<section>\n\n\n\n\n\n\n\n\n<div>\n<div>\n<h1><em>Procurando em alugar vans em São Paulo?</em></h1>\n\n\n\n<p><em>Alugue a van perfeita para sua viagem ou evento em São Paulo. Oferecemos veículos confortáveis, seguros e equipados com tudo o que você precisa. Seja para passeios em grupo, eventos especiais ou mudanças, temos a solução ideal.</em></p>\n\n\n\n<a href=\"/solicite-um-orcamento\" rel=\"nofollow\" class=\"btn\">Entrar em contato</a>\n</div>\n</div>\n</section>\n\n\n\n<section>\n<div class=\"columns\">\n<div class=\"column\">\n<div>\n<div><div class=\"figure-img\">\n<figure class=\"aligncenter\"><img width=\"230\" height=\"100\" src=\"/wp-content/uploads/2025/07/Logo-EMTU.webp\" alt=\"\" loading=\"lazy\"></figure>\n</div></div>\n</div>\n\n\n\n<figure class=\"figure-img\"><img src=\"/wp-content/uploads/2026/03/Logo-da-ANTT.webp\" alt=\"Logo da ANTT\" width=\"845\" height=\"294\" loading=\"lazy\"></figure>\n</div>\n\n\n\n<div class=\"column\"><div class=\"figure-img\">\n<figure class=\"aligncenter\"><img loading=\"lazy\" width=\"500\" height=\"241\" src=\"/wp-content/uploads/2025/07/Logo-SPTrans.webp\" alt=\"Logo SPTrans\"></figure>\n</div>\n\n\n<figure class=\"figure-img\"><img src=\"/wp-content/uploads/2026/03/Logo-da-Artesp.webp\" alt=\"Logo da Artesp\" width=\"1418\" height=\"246\" loading=\"lazy\"></figure>\n</div>\n</div>\n</section>\n\n\n\n<section>\n<h2 class=\"text-center\">Nossos serviços</h2>\n\n\n\n<div class=\"columns\">\n<div class=\"column\">\n<div>\n<div>\n<div>\n<div>\n<div>\n<div><div class=\"figure-img\">\n<figure class=\"aligncenter\"><img loading=\"lazy\" width=\"630\" height=\"396\" src=\"/wp-content/uploads/2025/06/Van-Mercedes-Benz-Sprinter.webp\" alt=\"Van Mercedes Benz Sprinter\" srcset=\"/wp-content/uploads/2025/06/Van-Mercedes-Benz-Sprinter.webp 630w, /wp-content/uploads/2025/06/Van-Mercedes-Benz-Sprinter-300x189.webp 300w\" sizes=\"(max-width: 630px) 100vw, 630px\"></figure>\n</div>\n\n\n<h3><a href=\"/aluguel-de-van/\">Aluguel de van</a></h3>\n\n\n\n<p>Oferecemos aluguel de vans para viagens, passeios, eventos e traslados. Nossas vans são confortáveis, seguras e ideais para grupos, com atendimento ágil e personalizado.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n\n\n\n<div class=\"column\">\n<div>\n<div><div class=\"figure-img\">\n<figure class=\"aligncenter\"><img loading=\"lazy\" width=\"630\" height=\"396\" src=\"/wp-content/uploads/2025/07/Van-Mercedes-Benz-branca.webp\" alt=\"Van Mercedes Benz branca\" srcset=\"/wp-content/uploads/2025/07/Van-Mercedes-Benz-branca.webp 630w, /wp-content/uploads/2025/07/Van-Mercedes-Benz-branca-300x189.webp 300w\" sizes=\"(max-width: 630px) 100vw, 630px\"></figure>\n</div></div>\n\n\n\n<h3><a href=\"/aluguel-de-van-sem-motorista/\"></a><a href=\"/aluguel-de-van-para-viagem/\">Aluguel de van para viagem</a></h3>\n</div>\n\n\n\n<p class=\"text-center\">Disponibilizamos aluguel de van para viagem, ideal para grupos que desejam conforto, segurança e facilidade no transporte. Nossas vans são preparadas para tornar seu trajeto mais confortável e sem complicações.</p>\n</div>\n\n\n\n<div class=\"column\"><div class=\"figure-img\">\n<figure class=\"aligncenter\"><img loading=\"lazy\" width=\"630\" height=\"396\" src=\"/wp-content/uploads/2025/07/Van-Sprinter-prata.webp\" alt=\"Van Sprinter prata\" srcset=\"/wp-content/uploads/2025/07/Van-Sprinter-prata.webp 630w, /wp-content/uploads/2025/07/Van-Sprinter-prata-300x189.webp 300w\" sizes=\"(max-width: 630px) 100vw, 630px\"></figure>\n</div>\n\n\n<h3><a href=\"/aluguel-de-van-com-motorista/\">Aluguel de van com motorista</a></h3>\n\n\n\n<p class=\"text-center\">Com o nosso serviço de aluguel de van com motorista, você viaja com conforto, segurança e sem preocupações. Perfeito para grupos que preferem praticidade do início ao fim do trajeto.</p>\n</div>\n</div>\n\n\n\n<hr>\n\n\n\n<div class=\"columns\">\n<div class=\"column\">\n<div>\n<div>\n<div>\n<div>\n<div>\n<div>\n<figure class=\"figure-img\"><img loading=\"lazy\" width=\"630\" height=\"396\" src=\"/wp-content/uploads/2025/07/Van-Mercedes-Benz-branca.webp\" alt=\"Van Mercedes Benz branca\" srcset=\"/wp-content/uploads/2025/07/Van-Mercedes-Benz-branca.webp 630w, /wp-content/uploads/2025/07/Van-Mercedes-Benz-branca-300x189.webp 300w\" sizes=\"(max-width: 630px) 100vw, 630px\"></figure>\n\n\n\n<h3><a href=\"/aluguel-de-van-para-viagem/\"></a><a href=\"/aluguel-de-van-para-passeio/\">Aluguel de van para passeio</a></h3>\n\n\n\n<p>Locação de van para passeios e viagens em grupo. Frota moderna, climatizada e perfeita para turismo, excursões e traslados.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n\n\n\n<div class=\"column\">\n<div>\n<div><div class=\"figure-img\">\n<figure class=\"aligncenter\"><img loading=\"lazy\" width=\"630\" height=\"396\" src=\"/wp-content/uploads/2025/07/Mercedes-Benz-Minivan-prata.webp\" alt=\"Mercedes Benz Minivan prata\" srcset=\"/wp-content/uploads/2025/07/Mercedes-Benz-Minivan-prata.webp 630w, /wp-content/uploads/2025/07/Mercedes-Benz-Minivan-prata-300x189.webp 300w\" sizes=\"(max-width: 630px) 100vw, 630px\"></figure>\n</div></div>\n\n\n\n<h3><a href=\"/aluguel-de-mini-van/\">Aluguel de mini van</a></h3>\n</div>\n\n\n\n<p>Aluguel de minivan com conforto e segurança para grupos pequenos. Veículos modernos, práticos e ideais para viagens e traslados com total tranquilidade.</p>\n</div>\n\n\n\n<div class=\"column\">\n<figure class=\"figure-img\"><img loading=\"lazy\" width=\"630\" height=\"396\" src=\"/wp-content/uploads/2025/07/Van-de-12-lugares-branca.webp\" alt=\"Van de 12 lugares branca\" srcset=\"/wp-content/uploads/2025/07/Van-de-12-lugares-branca.webp 630w, /wp-content/uploads/2025/07/Van-de-12-lugares-branca-300x189.webp 300w\" sizes=\"(max-width: 630px) 100vw, 630px\"></figure>\n\n\n\n<h3><a href=\"/aluguel-de-van-12-lugares/\">Aluguel de van 12 lugares</a></h3>\n\n\n\n<p>Alugamos vans de 12 lugares, ideais para grupos que precisam de conforto e praticidade em viagens e deslocamentos. Veículos seguros e bem equipados para garantir uma viagem tranquila.</p>\n</div>\n</div>\n\n\n\n<hr>\n\n\n\n<div class=\"columns\">\n<div class=\"column\">\n<div>\n<div>\n<div>\n<div>\n<div>\n<div>\n<div>\n<img loading=\"lazy\" width=\"536\" height=\"325\" alt=\"Van Renault Master 15 lugares\" src=\"/wp-content/uploads/2025/07/Van-Renault-Master-15-lugares.webp\" title=\"Van Renault Master 15 lugares\" srcset=\"/wp-content/uploads/2025/07/Van-Renault-Master-15-lugares.webp 536w, /wp-content/uploads/2025/07/Van-Renault-Master-15-lugares-300x182.webp 300w\" sizes=\"(max-width: 536px) 100vw, 536px\">\n</div>\n\n\n\n<h3><a href=\"/aluguel-de-van-15-lugares/\">Aluguel de van 15 lugares</a></h3>\n\n\n\n<p>Oferecemos vans de 15 lugares ideais para viagens em grupo, excursões e eventos. Conforto, segurança e espaço para todos, com motoristas experientes ou opção sem condutor.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n\n\n\n<div class=\"column\">\n<div>\n<div>\n<img loading=\"lazy\" width=\"630\" height=\"396\" alt=\"Van Mercedes Benz Sprinter\" src=\"/wp-content/uploads/2025/06/Van-Mercedes-Benz-Sprinter.webp\" title=\"Van Mercedes Benz Sprinter\" srcset=\"/wp-content/uploads/2025/06/Van-Mercedes-Benz-Sprinter.webp 630w, /wp-content/uploads/2025/06/Van-Mercedes-Benz-Sprinter-300x189.webp 300w\" sizes=\"(max-width: 630px) 100vw, 630px\">\n</div>\n\n\n\n<h3><a href=\"/aluguel-de-van-18-lugares/\">Aluguel de van 18 lugares</a></h3>\n</div>\n\n\n\n<p>Viaje com mais espaço e economia! Nossas vans de 18 lugares acomodam grupos maiores com conforto e segurança.</p>\n</div>\n\n\n\n<div class=\"column\">\n<img loading=\"lazy\" width=\"630\" height=\"396\" alt=\"Van Citroen branca de carga\" src=\"/wp-content/uploads/2025/07/Van-Citroen-branca-de-carga.webp\" title=\"Van Citroen branca de carga\" srcset=\"/wp-content/uploads/2025/07/Van-Citroen-branca-de-carga.webp 630w, /wp-content/uploads/2025/07/Van-Citroen-branca-de-carga-300x189.webp 300w\" sizes=\"(max-width: 630px) 100vw, 630px\">\n\n\n\n<h3><a href=\"/aluguel-de-van-de-carga/\">Aluguel de van de carga</a></h3>\n\n\n\n<p>Precisa transportar mercadorias? Conte com nossas vans de carga para entregas ágeis e seguras. Frota moderna, ideal para empresas e mudanças leves. Peça um orçamento sem compromisso.</p>\n</div>\n</div>\n\n\n\n<hr>\n\n\n\n<div class=\"columns\">\n<div class=\"column\">\n<div>\n<div>\n<div>\n<div>\n<div>\n<div>\n<div>\n<figure class=\"figure-img\"><img loading=\"lazy\" width=\"630\" height=\"396\" src=\"/wp-content/uploads/2025/07/Master-furgao.webp\" alt=\"Master furgão\" srcset=\"/wp-content/uploads/2025/07/Master-furgao.webp 630w, /wp-content/uploads/2025/07/Master-furgao-300x189.webp 300w\" sizes=\"(max-width: 630px) 100vw, 630px\"></figure>\n</div>\n\n\n\n<h3><a href=\"/aluguel-de-van-furgao/\">Aluguel de van furgão</a></h3>\n\n\n\n<p>Transporte suas mercadorias com segurança! Alugue uma van furgão com manutenção em dia e atendimento rápido. Prático, confiável e acessível.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n\n\n\n<div class=\"column\">\n<div>\n<div>\n<figure class=\"figure-img\"><img loading=\"lazy\" width=\"630\" height=\"396\" src=\"/wp-content/uploads/2025/07/Van-Mercedes-Benz-branca.webp\" alt=\"Van Mercedes Benz branca\" srcset=\"/wp-content/uploads/2025/07/Van-Mercedes-Benz-branca.webp 630w, /wp-content/uploads/2025/07/Van-Mercedes-Benz-branca-300x189.webp 300w\" sizes=\"(max-width: 630px) 100vw, 630px\"></figure>\n</div>\n\n\n\n<h3><a href=\"/aluguel-de-van-para-praias/\">Aluguel de van para praias</a></h3>\n</div>\n\n\n\n<p>Locação de van para praias e passeios em grupo. Frota moderna, climatizada e ideal para turismo, excursões e traslados até os melhores destinos litorâneos.</p>\n</div>\n\n\n\n<div class=\"column\">\n<figure class=\"figure-img\"><img loading=\"lazy\" width=\"630\" height=\"396\" src=\"/wp-content/uploads/2025/07/Mercedes-Benz-Minivan-prata.webp\" alt=\"Mercedes Benz Minivan prata\" srcset=\"/wp-content/uploads/2025/07/Mercedes-Benz-Minivan-prata.webp 630w, /wp-content/uploads/2025/07/Mercedes-Benz-Minivan-prata-300x189.webp 300w\" sizes=\"(max-width: 630px) 100vw, 630px\"></figure>\n\n\n\n<h3><a href=\"/aluguel-de-mini-van-7-lugares/\">Aluguel de mini van 7 lugares</a></h3>\n\n\n\n<p>Alugue uma minivan 7 lugares e aproveite cada momento com sua família ou amigos. Ideal para turismo e deslocamentos em grupo.</p>\n</div>\n</div>\n</section>\n\n\n\n<section>\n<div>\n<div>\n<h2><em>Sobre nós</em></h2>\n\n\n\n<h2>Transportamos pessoas e criamos experiências</h2>\n\n\n\n<p>Com <strong>mais de 1500 clientes satisfeitos</strong>, a <strong>Aluguel de Vans SP</strong> é referência em transporte de passageiros em São Paulo e região metropolitana. </p>\n\n\n\n<p>São <strong>12 anos de experiência</strong> oferecendo serviços personalizados, adaptados às necessidades de cada cliente, seja para eventos corporativos, viagens em grupo ou passeios em família.</p>\n\n\n\n<a href=\"/solicite-um-orcamento\" rel=\"nofollow\" class=\"btn\">Entrar em contato</a>\n</div>\n\n\n\n<div>\n<h3>Viagens mais populares</h3>\n\n\n\n<h4><span>Avenida Paulista</span></h4>\n\n\n\n<h4><span>Parque Ibirapuera</span></h4>\n\n\n\n<h4><span>Mercado Municipal</span></h4>\n\n\n\n<h4><span>Beco do Batman</span></h4>\n\n\n\n<h4><span>Museu do Futebol</span></h4>\n\n\n\n<h4><span>Jardim Botânico</span></h4>\n\n\n\n<h4><span>Aquário de São Paulo</span></h4>\n</div>\n</div>\n</section>",
+ "crawledAt": "2026-10-03T23:06:24.978Z"
+}

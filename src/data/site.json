@@ -1,0 +1,61 @@
+{
+ "nav": [
+  {
+   "label": "Início",
+   "href": "/",
+   "children": []
+  },
+  {
+   "label": "Serviços",
+   "href": "/servicos/",
+   "children": []
+  },
+  {
+   "label": "Blog",
+   "href": "/blog/",
+   "children": []
+  },
+  {
+   "label": "Equipe",
+   "href": "/equipe/",
+   "children": []
+  },
+  {
+   "label": "Cases",
+   "href": "/cases/",
+   "children": []
+  },
+  {
+   "label": "Sobre nós",
+   "href": "/sobre-nos/",
+   "children": []
+  },
+  {
+   "label": "Contato",
+   "href": "/contato/",
+   "children": []
+  }
+ ],
+ "ctaLabel": "Solicitar orçamento",
+ "ctaHref": "/solicite-um-orcamento/",
+ "footerHtml": "<footer>\n<div>\n<section>\n<img loading=\"lazy\" width=\"500\" height=\"500\" src=\"/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp\" alt=\"Logo aluguel de van sp sem fundo\" title=\"Logo aluguel de van sp sem fundo\" srcset=\"/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp 500w, /wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo-300x300.webp 300w, /wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo-150x150.webp 150w\" sizes=\"(max-width: 500px) 100vw, 500px\">\n\n\n\n<h2>Aluguel de Van SP</h2>\n\n\n\n<div>\n<div>\n<h3><span>Serviços</span></h3>\n\n\n\n<p>Aluguel de Van SP está localizado em São Paulo e atende toda a cidade. Contate-nos para agendar um orçamento gratuito.</p>\n</div>\n\n\n\n<div>\n<h3><span>Local</span></h3>\n\n\n\n<p>Av. Magalhães de Castro, 12.000 - Cidade Jardim, São Paulo - SP, 05502-001</p>\n</div>\n\n\n\n<div>\n<h3><span>Atendimento</span></h3>\n\n\n\n<p>24 horas</p>\n\n\n\n<p><a href=\"tel:+11 97541-3120\">11 97541-3120</a></p>\n\n\n\n<p><a href=\"mailto:contato@alugueldevansp.com\">contato@alugueldevansp.com</a></p>\n</div>\n</div>\n\n\n\n<div>\n<div>\n<p><a href=\"/\">Início</a></p>\n\n\n\n<p><a href=\"/politica-de-privacidade-de-dados/\">Privacidade de dados</a></p>\n\n\n\n<p><a href=\"/termos-de-servicos/\">Termos de serviços</a></p>\n</div>\n</div>\n\n\n\n<div>\n<a href=\"https://www.facebook.com/profile.php?id=61573785856612\" aria-label=\"Follow us on Facebook\" rel=\"noopener\" class=\"btn\"></a>\n\n\n\n<div>\n<a href=\"https://www.reddit.com/user/Alugueldevansp/\" aria-label=\"Follow us on Facebook\" rel=\"noopener\" class=\"btn\"></a>\n</div>\n\n\n\n<div>\n<div>\n<div>\n<a href=\"https://www.youtube.com/@AlugueldeVanSP\" aria-label=\"Follow us on Facebook\" rel=\"noopener\" class=\"btn\"></a>\n</div>\n</div>\n</div>\n\n\n\n<a href=\"https://www.instagram.com/alugueldevansp_oficial?igsh=aXR3ZnlmcTc4dWF0&amp;utm_source=qr\" aria-label=\"Follow us on Facebook\" rel=\"noopener\" class=\"btn\"></a>\n\n\n\n<a aria-label=\"Follow us on Facebook\" rel=\"noopener\" href=\"https://www.pinterest.com/alugueldevansp/\" class=\"btn\"></a>\n</div>\n\n\n\n<div>\n<div><div>\n<div>\n<p>Aluguel de Vans SP © 2026 | Todos os Direitos Reservados</p>\n\n\n\n<img loading=\"lazy\" width=\"198\" height=\"254\" alt=\"Cadeado do certificado SSL\" src=\"/wp-content/uploads/2022/01/Cadeado-do-certificado-SSL.webp\" title=\"Cadeado do certificado SSL\">\n</div>\n</div></div>\n</div>\n</section>\n</div>\n</footer>",
+ "icons": [
+  {
+   "rel": "icon",
+   "href": "/wp-content/uploads/2022/01/cropped-Logo-aluguel-de-van-sp-sem-fundo-1-32x32.webp",
+   "sizes": "32x32"
+  },
+  {
+   "rel": "icon",
+   "href": "/wp-content/uploads/2022/01/cropped-Logo-aluguel-de-van-sp-sem-fundo-1-192x192.webp",
+   "sizes": "192x192"
+  },
+  {
+   "rel": "apple-touch-icon",
+   "href": "/wp-content/uploads/2022/01/cropped-Logo-aluguel-de-van-sp-sem-fundo-1-180x180.webp",
+   "sizes": null
+  }
+ ],
+ "logo": "/wp-content/uploads/2022/01/cropped-cropped-Logo-aluguel-de-van-sp-sem-fundo.webp",
+ "siteName": "aluguel de van sp"
+}

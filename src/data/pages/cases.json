@@ -1,0 +1,93 @@
+{
+ "url": "https://alugueldevansp.com/cases/",
+ "path": "/cases/",
+ "type": "page",
+ "lastmod": "2025-08-07T02:46:22+00:00",
+ "redirectedTo": null,
+ "title": "Cases - aluguel de van sp",
+ "description": "Em São Paulo, onde cada trajeto tem seu desafio, oferecer um serviço de transporte confiável, confortável e seguro é essencial e é exatamente isso que",
+ "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+ "canonical": "https://alugueldevansp.com/cases/",
+ "og": [
+  [
+   "og:locale",
+   "pt_BR"
+  ],
+  [
+   "og:type",
+   "article"
+  ],
+  [
+   "og:title",
+   "Cases - aluguel de van sp"
+  ],
+  [
+   "og:description",
+   "Em São Paulo, onde cada trajeto tem seu desafio, oferecer um serviço de transporte confiável, confortável e seguro é essencial e é exatamente isso que"
+  ],
+  [
+   "og:url",
+   "https://alugueldevansp.com/cases/"
+  ],
+  [
+   "og:site_name",
+   "aluguel de van sp"
+  ],
+  [
+   "og:updated_time",
+   "2025-08-07T02:46:22+00:00"
+  ],
+  [
+   "og:image",
+   "http://alugueldevansp.com/wp-content/uploads/2025/08/Evento-1024x576.webp"
+  ],
+  [
+   "og:image:alt",
+   "Cases"
+  ],
+  [
+   "article:published_time",
+   "2025-08-07T02:46:20+00:00"
+  ],
+  [
+   "article:modified_time",
+   "2025-08-07T02:46:22+00:00"
+  ]
+ ],
+ "twitter": [
+  [
+   "twitter:card",
+   "summary_large_image"
+  ],
+  [
+   "twitter:title",
+   "Cases - aluguel de van sp"
+  ],
+  [
+   "twitter:description",
+   "Em São Paulo, onde cada trajeto tem seu desafio, oferecer um serviço de transporte confiável, confortável e seguro é essencial e é exatamente isso que"
+  ],
+  [
+   "twitter:image",
+   "http://alugueldevansp.com/wp-content/uploads/2025/08/Evento-1024x576.webp"
+  ],
+  [
+   "twitter:label1",
+   "Tempo para leitura"
+  ],
+  [
+   "twitter:data1",
+   "2 minutos"
+  ]
+ ],
+ "jsonld": [
+  "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":[\"AutomotiveBusiness\",\"Organization\"],\"@id\":\"https://alugueldevansp.com/#organization\",\"name\":\"aluguel de van sp\",\"url\":\"https://alugueldevansp.com\",\"logo\":{\"@type\":\"ImageObject\",\"@id\":\"https://alugueldevansp.com/#logo\",\"url\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/cropped-cropped-Logo-aluguel-de-van-sp-sem-fundo.webp\",\"contentUrl\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/cropped-cropped-Logo-aluguel-de-van-sp-sem-fundo.webp\",\"caption\":\"aluguel de van sp\",\"inLanguage\":\"pt-BR\",\"width\":\"512\",\"height\":\"307\"},\"openingHours\":[\"Mo,Tu,We,Th,Fr,Sa,Su 09:00-17:00\"],\"image\":{\"@id\":\"https://alugueldevansp.com/#logo\"}},{\"@type\":\"WebSite\",\"@id\":\"https://alugueldevansp.com/#website\",\"url\":\"https://alugueldevansp.com\",\"name\":\"aluguel de van sp\",\"publisher\":{\"@id\":\"https://alugueldevansp.com/#organization\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"ImageObject\",\"@id\":\"http://alugueldevansp.com/wp-content/uploads/2025/08/Evento-1024x576.webp\",\"url\":\"http://alugueldevansp.com/wp-content/uploads/2025/08/Evento-1024x576.webp\",\"width\":\"200\",\"height\":\"200\",\"inLanguage\":\"pt-BR\"},{\"@type\":\"WebPage\",\"@id\":\"https://alugueldevansp.com/cases/#webpage\",\"url\":\"https://alugueldevansp.com/cases/\",\"name\":\"Cases - aluguel de van sp\",\"datePublished\":\"2025-08-07T02:46:20+00:00\",\"dateModified\":\"2025-08-07T02:46:22+00:00\",\"isPartOf\":{\"@id\":\"https://alugueldevansp.com/#website\"},\"primaryImageOfPage\":{\"@id\":\"http://alugueldevansp.com/wp-content/uploads/2025/08/Evento-1024x576.webp\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"Person\",\"@id\":\"https://alugueldevansp.com/author/edgarseolocalgmail-com/\",\"name\":\"edgarseolocal@gmail.com\",\"url\":\"https://alugueldevansp.com/author/edgarseolocalgmail-com/\",\"image\":{\"@type\":\"ImageObject\",\"@id\":\"https://secure.gravatar.com/avatar/cc75def962b0128d2a4b2727892367fb8a6906ec8cf6850e66125b188a447c64?s=96&amp;d=mm&amp;r=g\",\"url\":\"https://secure.gravatar.com/avatar/cc75def962b0128d2a4b2727892367fb8a6906ec8cf6850e66125b188a447c64?s=96&amp;d=mm&amp;r=g\",\"caption\":\"edgarseolocal@gmail.com\",\"inLanguage\":\"pt-BR\"},\"sameAs\":[\"https://alugueldevansp.com\"],\"worksFor\":{\"@id\":\"https://alugueldevansp.com/#organization\"}},{\"@type\":\"Article\",\"headline\":\"Cases - aluguel de van sp\",\"datePublished\":\"2025-08-07T02:46:20+00:00\",\"dateModified\":\"2025-08-07T02:46:22+00:00\",\"author\":{\"@id\":\"https://alugueldevansp.com/author/edgarseolocalgmail-com/\",\"name\":\"edgarseolocal@gmail.com\"},\"publisher\":{\"@id\":\"https://alugueldevansp.com/#organization\"},\"description\":\"Em S\\u00e3o Paulo, onde cada trajeto tem seu desafio, oferecer um servi\\u00e7o de transporte confi\\u00e1vel, confort\\u00e1vel e seguro \\u00e9 essencial e \\u00e9 exatamente isso que\",\"name\":\"Cases - aluguel de van sp\",\"@id\":\"https://alugueldevansp.com/cases/#richSnippet\",\"isPartOf\":{\"@id\":\"https://alugueldevansp.com/cases/#webpage\"},\"image\":{\"@id\":\"http://alugueldevansp.com/wp-content/uploads/2025/08/Evento-1024x576.webp\"},\"inLanguage\":\"pt-BR\",\"mainEntityOfPage\":{\"@id\":\"https://alugueldevansp.com/cases/#webpage\"}}]}"
+ ],
+ "h1InContent": false,
+ "h1": "Cases",
+ "featuredImage": null,
+ "hasForm": false,
+ "mode": "entry",
+ "html": "<p>Em São Paulo, onde cada trajeto tem seu desafio, oferecer um serviço de transporte confiável, confortável e seguro é essencial e é exatamente isso que fazemos. Seja para viagens em grupo, eventos corporativos, entregas comerciais ou passeios em família, temos soluções sob medida para cada necessidade.</p>\n\n\n\n<p>A seguir, compartilhamos alguns <strong>cases reais que mostram como ajudamos nossos clientes a transformar logística em tranquilidade</strong>. De eventos a romarias, de entregas rápidas a férias inesquecíveis, nossos serviços de aluguel de van fazem a diferença em cada quilômetro.</p>\n\n\n\n<p>Confira essas histórias e descubra como podemos facilitar o seu próximo trajeto.</p>\n\n\n\n<h2>1- Empresa de eventos: logística rápida e sem dor de cabeça</h2>\n\n\n<div class=\"figure-img\">\n<figure class=\"aligncenter\"><img width=\"1024\" height=\"576\" src=\"/wp-content/uploads/2025/08/Evento-1024x576.webp\" alt=\"Evento\" srcset=\"/wp-content/uploads/2025/08/Evento-1024x576.webp 1024w, /wp-content/uploads/2025/08/Evento-300x169.webp 300w, /wp-content/uploads/2025/08/Evento-768x432.webp 768w, /wp-content/uploads/2025/08/Evento-1536x864.webp 1536w, /wp-content/uploads/2025/08/Evento-2048x1152.webp 2048w\" sizes=\"(max-width: 1024px) 100vw, 1024px\" loading=\"lazy\"></figure>\n</div>\n\n\n<ul>\n<li><strong>Cliente:</strong> Agência de eventos corporativos</li>\n\n\n\n<li><strong>Necessidade:</strong> Transporte de equipe e equipamentos para um congresso em Campinas</li>\n\n\n\n<li><strong>Solução:</strong> Aluguel de van 15 lugares com motorista</li>\n\n\n\n<li><strong>Resultado:</strong> A agência conseguiu transportar toda a equipe com pontualidade, segurança e sem atrasos. A van comportou pessoas e materiais de forma organizada, e o motorista conhecia bem o trajeto. O cliente elogiou o profissionalismo e já fechou contrato para mais três eventos.</li>\n</ul>\n\n\n\n<h2>2- Família grande: viagem de férias tranquila ao interior</h2>\n\n\n<div class=\"figure-img\">\n<figure class=\"aligncenter\"><img width=\"1024\" height=\"683\" src=\"/wp-content/uploads/2025/08/Mulher-feliz-na-viagem-1024x683.webp\" alt=\"Mulher feliz na viagem\" srcset=\"/wp-content/uploads/2025/08/Mulher-feliz-na-viagem-1024x683.webp 1024w, /wp-content/uploads/2025/08/Mulher-feliz-na-viagem-300x200.webp 300w, /wp-content/uploads/2025/08/Mulher-feliz-na-viagem-768x512.webp 768w, /wp-content/uploads/2025/08/Mulher-feliz-na-viagem-1536x1024.webp 1536w, /wp-content/uploads/2025/08/Mulher-feliz-na-viagem-2048x1365.webp 2048w\" sizes=\"(max-width: 1024px) 100vw, 1024px\" loading=\"lazy\"></figure>\n</div>\n\n\n<ul>\n<li><strong>Cliente:</strong> Família de 10 pessoas</li>\n\n\n\n<li><strong>Necessidade:</strong> Viagem de uma semana para Brotas</li>\n\n\n\n<li><strong>Solução:</strong> Aluguel de van 12 lugares sem motorista</li>\n\n\n\n<li><strong>Resultado:</strong> A família aproveitou as férias com conforto e liberdade, levando bagagens e até equipamentos para trilha. Economizaram no combustível, pois todos foram em um único veículo, e destacaram o bom estado da van e a facilidade de retirada e devolução.</li>\n</ul>\n\n\n\n<h2>3- Turma da faculdade: formatura inesquecível</h2>\n\n\n<div class=\"figure-img\">\n<figure class=\"aligncenter\"><img loading=\"lazy\" width=\"1024\" height=\"683\" src=\"/wp-content/uploads/2025/08/Festa-de-formatura-1024x683.webp\" alt=\"Festa de formatura\" srcset=\"/wp-content/uploads/2025/08/Festa-de-formatura-1024x683.webp 1024w, /wp-content/uploads/2025/08/Festa-de-formatura-300x200.webp 300w, /wp-content/uploads/2025/08/Festa-de-formatura-768x512.webp 768w, /wp-content/uploads/2025/08/Festa-de-formatura-1536x1024.webp 1536w, /wp-content/uploads/2025/08/Festa-de-formatura-2048x1365.webp 2048w\" sizes=\"(max-width: 1024px) 100vw, 1024px\"></figure>\n</div>\n\n\n<ul>\n<li><strong>Cliente:</strong> Grupo de 14 universitários</li>\n\n\n\n<li><strong>Necessidade:</strong> Ida e volta da festa de formatura em Atibaia</li>\n\n\n\n<li><strong>Solução:</strong> Van 15 lugares com motorista</li>\n\n\n\n<li><strong>Resultado:</strong> Com um motorista experiente, o grupo pôde curtir a noite sem se preocupar com direção ou caronas. A van foi pontual na ida e na volta, garantindo segurança a todos. A experiência foi tão positiva que indicaram o serviço para a comissão de formatura do próximo semestre.</li>\n</ul>\n\n\n\n<h2>4- Pequeno comércio: entrega de produtos no atacado</h2>\n\n\n<div class=\"figure-img\">\n<figure class=\"aligncenter\"><img loading=\"lazy\" width=\"1024\" height=\"683\" src=\"/wp-content/uploads/2025/08/Preparando-a-entrega-na-van-1024x683.webp\" alt=\"Preparando a entrega na van\" srcset=\"/wp-content/uploads/2025/08/Preparando-a-entrega-na-van-1024x683.webp 1024w, /wp-content/uploads/2025/08/Preparando-a-entrega-na-van-300x200.webp 300w, /wp-content/uploads/2025/08/Preparando-a-entrega-na-van-768x512.webp 768w, /wp-content/uploads/2025/08/Preparando-a-entrega-na-van-1536x1024.webp 1536w, /wp-content/uploads/2025/08/Preparando-a-entrega-na-van-2048x1365.webp 2048w\" sizes=\"(max-width: 1024px) 100vw, 1024px\"></figure>\n</div>\n\n\n<ul>\n<li><strong>Cliente:</strong> Loja de artigos para festas</li>\n\n\n\n<li><strong>Necessidade:</strong> Transporte de mercadorias do Brás para o depósito na Zona Oeste</li>\n\n\n\n<li><strong>Solução:</strong> Van de carga</li>\n\n\n\n<li><strong>Resultado:</strong> A entrega foi feita em menos tempo que o esperado. A van comportou todas as caixas em uma única viagem, sem risco de avaria. O cliente disse que economizou em comparação com fretes convencionais e passou a alugar semanalmente para reposição de estoque.</li>\n</ul>\n\n\n\n<h2>5- Turismo Religioso: grupo de romaria a Aparecida</h2>\n\n\n<div class=\"figure-img\">\n<figure class=\"aligncenter\"><img loading=\"lazy\" width=\"1024\" height=\"683\" src=\"/wp-content/uploads/2025/08/Aparecida-1024x683.webp\" alt=\"Aparecida\" srcset=\"/wp-content/uploads/2025/08/Aparecida-1024x683.webp 1024w, /wp-content/uploads/2025/08/Aparecida-300x200.webp 300w, /wp-content/uploads/2025/08/Aparecida-768x512.webp 768w, /wp-content/uploads/2025/08/Aparecida-1536x1024.webp 1536w, /wp-content/uploads/2025/08/Aparecida-2048x1365.webp 2048w\" sizes=\"(max-width: 1024px) 100vw, 1024px\"></figure>\n</div>\n\n\n<ul>\n<li><strong>Cliente:</strong> Comunidade de igreja na Zona Sul de SP</li>\n\n\n\n<li><strong>Necessidade:</strong> Viagem de um dia com 18 pessoas até Aparecida do Norte</li>\n\n\n\n<li><strong>Solução:</strong> Van 18 lugares com motorista</li>\n\n\n\n<li><strong>Resultado:</strong> A viagem foi feita com conforto e total segurança. O motorista foi elogiado pela direção cuidadosa e simpatia com os passageiros. A experiência foi tão positiva que o grupo já agendou uma nova viagem para Canção Nova.</li>\n</ul>",
+ "crawledAt": "2026-10-04T00:53:08.776Z"
+}

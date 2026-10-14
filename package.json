@@ -1,0 +1,24 @@
+{
+  "name": "aluguel-de-van-sp",
+  "type": "module",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "crawl": "node scripts/crawl.mjs",
+    "images": "node scripts/images.mjs",
+    "sitemaps": "node scripts/build-sitemaps.mjs",
+    "build": "node scripts/build-sitemaps.mjs && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^7.3.5",
+    "cheerio": "^1.2.0"
+  },
+  "allowScripts": {
+    "esbuild": true
+  }
+}

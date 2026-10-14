@@ -1,0 +1,101 @@
+{
+ "url": "https://alugueldevansp.com/termos-de-servicos/",
+ "path": "/termos-de-servicos/",
+ "type": "page",
+ "lastmod": "2025-03-06T03:22:05+00:00",
+ "redirectedTo": null,
+ "title": "Termos de serviços - aluguel de van sp",
+ "description": "Ao acessar o site Aluguel de Van SP, você concorda em seguir estas diretrizes de uso, bem como todas as normas e regulamentações aplicáveis, reconhecendo sua",
+ "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+ "canonical": "https://alugueldevansp.com/termos-de-servicos/",
+ "og": [
+  [
+   "og:locale",
+   "pt_BR"
+  ],
+  [
+   "og:type",
+   "article"
+  ],
+  [
+   "og:title",
+   "Termos de serviços - aluguel de van sp"
+  ],
+  [
+   "og:description",
+   "Ao acessar o site Aluguel de Van SP, você concorda em seguir estas diretrizes de uso, bem como todas as normas e regulamentações aplicáveis, reconhecendo sua"
+  ],
+  [
+   "og:url",
+   "https://alugueldevansp.com/termos-de-servicos/"
+  ],
+  [
+   "og:site_name",
+   "aluguel de van sp"
+  ],
+  [
+   "og:image",
+   "https://alugueldevansp.com/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp"
+  ],
+  [
+   "og:image:secure_url",
+   "https://alugueldevansp.com/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp"
+  ],
+  [
+   "og:image:width",
+   "500"
+  ],
+  [
+   "og:image:height",
+   "500"
+  ],
+  [
+   "og:image:alt",
+   "Logo aluguel de van sp sem fundo"
+  ],
+  [
+   "og:image:type",
+   "image/webp"
+  ],
+  [
+   "article:published_time",
+   "2025-03-06T03:22:05+00:00"
+  ]
+ ],
+ "twitter": [
+  [
+   "twitter:card",
+   "summary_large_image"
+  ],
+  [
+   "twitter:title",
+   "Termos de serviços - aluguel de van sp"
+  ],
+  [
+   "twitter:description",
+   "Ao acessar o site Aluguel de Van SP, você concorda em seguir estas diretrizes de uso, bem como todas as normas e regulamentações aplicáveis, reconhecendo sua"
+  ],
+  [
+   "twitter:image",
+   "https://alugueldevansp.com/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp"
+  ],
+  [
+   "twitter:label1",
+   "Tempo para leitura"
+  ],
+  [
+   "twitter:data1",
+   "2 minutos"
+  ]
+ ],
+ "jsonld": [
+  "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":[\"AutomotiveBusiness\",\"Organization\"],\"@id\":\"https://alugueldevansp.com/#organization\",\"name\":\"aluguel de van sp\",\"url\":\"https://alugueldevansp.com\",\"logo\":{\"@type\":\"ImageObject\",\"@id\":\"https://alugueldevansp.com/#logo\",\"url\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/cropped-cropped-Logo-aluguel-de-van-sp-sem-fundo.webp\",\"contentUrl\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/cropped-cropped-Logo-aluguel-de-van-sp-sem-fundo.webp\",\"caption\":\"aluguel de van sp\",\"inLanguage\":\"pt-BR\",\"width\":\"512\",\"height\":\"307\"},\"openingHours\":[\"Mo,Tu,We,Th,Fr,Sa,Su 09:00-17:00\"],\"image\":{\"@id\":\"https://alugueldevansp.com/#logo\"}},{\"@type\":\"WebSite\",\"@id\":\"https://alugueldevansp.com/#website\",\"url\":\"https://alugueldevansp.com\",\"name\":\"aluguel de van sp\",\"publisher\":{\"@id\":\"https://alugueldevansp.com/#organization\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"ImageObject\",\"@id\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp\",\"url\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp\",\"width\":\"500\",\"height\":\"500\",\"caption\":\"Logo aluguel de van sp sem fundo\",\"inLanguage\":\"pt-BR\"},{\"@type\":\"WebPage\",\"@id\":\"https://alugueldevansp.com/termos-de-servicos/#webpage\",\"url\":\"https://alugueldevansp.com/termos-de-servicos/\",\"name\":\"Termos de servi\\u00e7os - aluguel de van sp\",\"datePublished\":\"2025-03-06T03:22:05+00:00\",\"dateModified\":\"2025-03-06T03:22:05+00:00\",\"isPartOf\":{\"@id\":\"https://alugueldevansp.com/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp\"},\"inLanguage\":\"pt-BR\"},{\"@type\":\"Person\",\"@id\":\"https://alugueldevansp.com/author/edgarseolocalgmail-com/\",\"name\":\"edgarseolocal@gmail.com\",\"url\":\"https://alugueldevansp.com/author/edgarseolocalgmail-com/\",\"image\":{\"@type\":\"ImageObject\",\"@id\":\"https://secure.gravatar.com/avatar/cc75def962b0128d2a4b2727892367fb8a6906ec8cf6850e66125b188a447c64?s=96&amp;d=mm&amp;r=g\",\"url\":\"https://secure.gravatar.com/avatar/cc75def962b0128d2a4b2727892367fb8a6906ec8cf6850e66125b188a447c64?s=96&amp;d=mm&amp;r=g\",\"caption\":\"edgarseolocal@gmail.com\",\"inLanguage\":\"pt-BR\"},\"sameAs\":[\"https://alugueldevansp.com\"],\"worksFor\":{\"@id\":\"https://alugueldevansp.com/#organization\"}},{\"@type\":\"Article\",\"headline\":\"Termos de servi\\u00e7os - aluguel de van sp\",\"datePublished\":\"2025-03-06T03:22:05+00:00\",\"dateModified\":\"2025-03-06T03:22:05+00:00\",\"author\":{\"@id\":\"https://alugueldevansp.com/author/edgarseolocalgmail-com/\",\"name\":\"edgarseolocal@gmail.com\"},\"publisher\":{\"@id\":\"https://alugueldevansp.com/#organization\"},\"description\":\"Ao acessar o site Aluguel de Van SP, voc\\u00ea concorda em seguir estas diretrizes de uso, bem como todas as normas e regulamenta\\u00e7\\u00f5es aplic\\u00e1veis, reconhecendo sua\",\"name\":\"Termos de servi\\u00e7os - aluguel de van sp\",\"@id\":\"https://alugueldevansp.com/termos-de-servicos/#richSnippet\",\"isPartOf\":{\"@id\":\"https://alugueldevansp.com/termos-de-servicos/#webpage\"},\"image\":{\"@id\":\"https://alugueldevansp.com/wp-content/uploads/2022/01/Logo-aluguel-de-van-sp-sem-fundo.webp\"},\"inLanguage\":\"pt-BR\",\"mainEntityOfPage\":{\"@id\":\"https://alugueldevansp.com/termos-de-servicos/#webpage\"}}]}"
+ ],
+ "h1InContent": false,
+ "h1": "Termos de serviços",
+ "featuredImage": null,
+ "hasForm": false,
+ "mode": "entry",
+ "html": "<h2><strong>Condições gerais</strong> </h2>\n\n\n\n<p>Ao acessar o site Aluguel de Van SP, você concorda em seguir estas diretrizes de uso, bem como todas as normas e regulamentações aplicáveis, reconhecendo sua responsabilidade pelo cumprimento das leis locais pertinentes. Caso não esteja de acordo com algum destes termos, o uso deste site não será permitido. </p>\n\n\n\n<p>Os conteúdos disponíveis neste site são protegidos por direitos autorais e registros de propriedade intelectual.</p>\n\n\n\n<h2><strong>Permissão de uso</strong> </h2>\n\n\n\n<p>O usuário recebe autorização para baixar temporariamente uma cópia do conteúdo (informações ou software) disponível no site Aluguel de Van SP, exclusivamente para consulta pessoal e não comercial. Essa concessão representa uma permissão de uso, não uma transferência de propriedade. </p>\n\n\n\n<p>Sendo assim, é proibido modificar ou reproduzir o conteúdo, utilizá-lo para fins comerciais ou exibições públicas, tentar desmontar ou reconfigurar qualquer software presente no site, remover notificações de direitos autorais ou propriedade e distribuir o conteúdo para terceiros ou hospedá-lo em outro servidor.</p>\n\n\n\n<p>Caso ocorra violação de qualquer uma dessas restrições, a permissão será revogada automaticamente, podendo ser cancelada pelo Aluguel de Van SP a qualquer momento. Quando a visualização do material for finalizada ou o direito de uso for encerrado, todos os arquivos baixados devem ser excluídos, independentemente do formato.</p>\n\n\n\n<h2><strong>Isenção de garantia</strong> </h2>\n\n\n\n<p>Os conteúdos disponibilizados no site do Aluguel de Van SP são fornecidos “como estão”, sem qualquer garantia expressa ou implícita. O Aluguel de Van SP se isenta de todas as garantias, incluindo, mas não se limitando a, garantias implícitas de comercialização, adequação a um propósito específico ou não violação de propriedade intelectual. </p>\n\n\n\n<p>Portanto, o Aluguel de Van SP não assegura a precisão, os resultados esperados ou a confiabilidade do uso dos conteúdos do site ou de qualquer plataforma vinculada.</p>\n\n\n\n<h2><strong>Limitação de responsabilidade</strong> </h2>\n\n\n\n<p>O Aluguel de Van SP e seus fornecedores não serão responsáveis por quaisquer danos, incluindo perda de dados, prejuízo financeiro ou interrupção de negócios decorrentes da utilização ou incapacidade de utilização dos materiais disponíveis no site. </p>\n\n\n\n<p>Mesmo que o Aluguel de Van SP ou um representante autorizado tenha sido informado sobre a possibilidade de tais danos, a responsabilidade será limitada conforme permitido pela legislação vigente. Algumas jurisdições não permitem restrições de garantias implícitas ou responsabilidade por danos incidentais, o que pode influenciar a aplicação dessas limitações ao usuário.</p>\n\n\n\n<h2><strong>Exatidão do conteúdo</strong> </h2>\n\n\n\n<p>Os materiais disponíveis no site do Aluguel de Van SP podem conter imprecisões técnicas, erros de digitação ou falhas na exibição de imagens. O Aluguel de Van SP não garante que qualquer informação presente no site seja exata, completa ou atualizada. Alterações podem ser realizadas a qualquer momento, sem aviso prévio, porém o site não assume qualquer compromisso de atualização contínua do conteúdo.</p>\n\n\n\n<h3><strong>Links para terceiros</strong> </h3>\n\n\n\n<p>O Aluguel de Van SP não analisa todos os sites externos vinculados e não se responsabiliza pelo conteúdo dessas páginas. A inclusão de um link não implica em aprovação ou recomendação por parte do Aluguel de Van SP. O uso de qualquer site vinculado será de total responsabilidade do usuário.</p>\n\n\n\n<h2><strong>Alterações nos termos</strong> </h2>\n\n\n\n<p>O Aluguel de Van SP pode modificar estes termos de uso a qualquer momento, sem necessidade de aviso prévio. Ao continuar utilizando este site, o usuário aceita as condições mais recentes dos termos de serviço.</p>\n\n\n\n<h2><strong>Legislação aplicável</strong> </h2>\n\n\n\n<p>Os presentes termos e condições são regulamentados pelas leis aplicáveis ao Aluguel de Van SP. Em caso de litígio, o usuário concorda em se submeter à jurisdição exclusiva dos tribunais competentes na localidade correspondente.</p>",
+ "crawledAt": "2026-10-04T01:44:09.033Z"
+}
