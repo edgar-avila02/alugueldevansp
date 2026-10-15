@@ -1240,16 +1240,48 @@ p { margin: 0 0 1.1em; }
   border-radius: 999px;
   border: 1.5px solid rgba(255, 255, 255, 0.35);
   box-shadow: 0 12px 30px -6px rgba(37, 211, 102, .7), 0 4px 12px rgba(0, 0, 0, .14);
-  transition: transform .25s cubic-bezier(.2, .8, .2, 1), box-shadow .25s ease;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(20px) scale(0.9);
+  transition: opacity .35s ease, transform .35s cubic-bezier(.2, .8, .2, 1), visibility .35s ease, box-shadow .25s ease;
+}
+.sticky-cta.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
 }
 .sticky-cta:hover {
   color: #fff !important;
-  transform: translateY(-3px) scale(1.03);
   box-shadow: 0 18px 38px -6px rgba(37, 211, 102, .85), 0 6px 16px rgba(0, 0, 0, .16);
+}
+.sticky-cta.is-visible:hover {
+  transform: translateY(-3px) scale(1.03);
 }
 .sticky-cta svg { width: 22px; height: 22px; fill: #fff; flex-shrink: 0; }
 .sticky-cta::before { content: ''; position: absolute; inset: 0; border-radius: inherit; border: 2.5px solid #25D366; animation: ping 2.4s cubic-bezier(0, 0, .2, 1) infinite; }
-@media (max-width: 520px) { .sticky-cta { left: 1rem; right: 1rem; justify-content: center; } }
+@media (max-width: 640px) {
+  .sticky-cta {
+    right: 1.25rem;
+    bottom: 1.25rem;
+    left: auto;
+    width: 54px;
+    height: 54px;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  .sticky-cta span {
+    display: none;
+  }
+  .sticky-cta svg {
+    width: 28px;
+    height: 28px;
+    margin: 0;
+  }
+}
 
 /* ==========================================================================
    Página de Equipe (/equipe/) — Grid e Imagens Arredondadas

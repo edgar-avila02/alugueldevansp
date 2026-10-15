@@ -269,6 +269,7 @@ const WHATS_PHONE = '11975413120';
       target="_blank"
       rel="noopener noreferrer"
       class="sticky-cta btn-chamativo"
+      id="stickyWhatsAppBtn"
       aria-label="Solicitar orçamento no WhatsApp"
     >
       <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
@@ -276,5 +277,42 @@ const WHATS_PHONE = '11975413120';
       </svg>
       <span>Solicitar orçamento</span>
     </a>
+
+    <script is:inline>
+      (function() {
+        var stickyCta = document.getElementById('stickyWhatsAppBtn');
+        if (!stickyCta) return;
+
+        var isVisible = false;
+        function updateStickyVisibility() {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+          var scrollHeight = Math.max(
+            document.documentElement.scrollHeight,
+            document.body.scrollHeight,
+            document.documentElement.offsetHeight,
+            document.body.offsetHeight
+          );
+          var clientHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+          var maxScroll = scrollHeight - clientHeight;
+
+          if (maxScroll > 0) {
+            var scrollProgress = scrollTop / maxScroll;
+            var shouldShow = scrollProgress >= 0.40;
+            if (shouldShow !== isVisible) {
+              isVisible = shouldShow;
+              if (shouldShow) {
+                stickyCta.classList.add('is-visible');
+              } else {
+                stickyCta.classList.remove('is-visible');
+              }
+            }
+          }
+        }
+
+        window.addEventListener('scroll', updateStickyVisibility, { passive: true });
+        window.addEventListener('resize', updateStickyVisibility, { passive: true });
+        updateStickyVisibility();
+      })();
+    </script>
   </body>
 </html>
