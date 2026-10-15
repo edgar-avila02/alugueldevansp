@@ -128,7 +128,7 @@ export function buildServiceHeroCard(pagePath, buttonHref, benefits = []) {
     <div class="service-benefit-card">
       <div class="benefit-card-header">
         <span class="benefit-card-icon" aria-hidden="true">${icons[idx]}</span>
-        <h3 class="benefit-card-title">${b.title}</h3>
+        <h2 class="benefit-card-title">${b.title}</h2>
       </div>
       <p class="benefit-card-desc">${b.text}</p>
     </div>
@@ -289,27 +289,34 @@ export function injectForm(html, pagePath = '') {
       }
       if (!heroButtonHref) heroButtonHref = getButtonHrefForPage(pagePath);
 
-      // Extrai os benefícios existentes do topo (h2 anteriores a reasonsH2)
+      // Extrai os benefícios existentes do topo (h2 ou h3 anteriores a reasonsH2)
       const topBenefits = [];
-      $('h2').each((_, el) => {
-        const h2El = $(el);
-        const text = h2El.text().trim();
+      $('h2, h3').each((_, el) => {
+        const hEl = $(el);
+        const text = hEl.text().trim();
         if (/razões|escolhem|dicas|orçamento|formulário|econômicas|quando reservar/i.test(text)) return false;
         
-        const p = h2El.closest('div').next().find('p').first().text().trim() ||
-                  h2El.parent().next().find('p').first().text().trim() ||
-                  h2El.next('p').text().trim();
+        const p = hEl.closest('div').next().find('p').first().text().trim() ||
+                  hEl.parent().next().find('p').first().text().trim() ||
+                  hEl.next('p').text().trim();
         if (text) {
           topBenefits.push({ title: text, text: p });
         }
       });
 
-      // Remove a div antiga com imagem solta, botão solto e os 3 h2 soltos
-      reasonsH2.prevAll().remove();
+      // Remove qualquer div, imagem ou carrossel legado anterior a reasonsH2
+      let curr = reasonsH2;
+      while (curr.length && !curr.is('body') && !curr.is('html')) {
+        curr.prevAll().remove();
+        if (curr.parent().is('body') || curr.parent().is('html')) {
+          break;
+        }
+        curr = curr.parent();
+      }
 
-      // Insere o novo container Hero Card da Imagem 2
+      // Insere o novo container Hero Card
       const heroCardHtml = buildServiceHeroCard(pagePath, heroButtonHref, topBenefits);
-      reasonsH2.before(heroCardHtml);
+      curr.before(heroCardHtml);
     }
 
     // 1. Bloco de Razões (Escuro - igual à imagem)
@@ -494,7 +501,14 @@ export function injectForm(html, pagePath = '') {
         } else if (curr.is('p')) {
           const rawText = curr.text().trim();
           toRemove.push(curr);
-          if (rawText.startsWith('✅') || rawText.startsWith('✔') || rawText.includes(':')) {
+          
+          const isCheck = rawText.startsWith('✅') || rawText.startsWith('✔');
+          const isIntro = /^(?:aqui\s+(?:vão|estão|seguem)|confira|veja\s+abaixo|sugestões|dicas)/i.test(rawText);
+          const hasColon = rawText.includes(':');
+          const colonParts = hasColon ? rawText.split(':') : [];
+          const hasDescAfterColon = colonParts.length > 1 && colonParts.slice(1).join(':').trim().length > 10;
+
+          if (!isIntro && (isCheck || (hasColon && hasDescAfterColon))) {
             const cleanText = rawText.replace(/^[✅✔\s\-–]+/, '').trim();
             const splitIdx = cleanText.indexOf(':');
             if (splitIdx > -1) {
@@ -506,7 +520,7 @@ export function injectForm(html, pagePath = '') {
               tips.push({ title: 'Dica importante', desc: cleanText });
             }
           } else if (!intro) {
-            intro = rawText;
+            intro = rawText.replace(/:\s*$/, '.');
           }
         }
         curr = curr.next();
@@ -520,7 +534,7 @@ export function injectForm(html, pagePath = '') {
         <div class="service-tip-card">
           <div class="tip-card-header">
             <span class="tip-check">✓</span>
-            <h4>${t.title}</h4>
+            <h3 class="tip-card-title">${t.title}</h3>
           </div>
           <p>${t.desc}</p>
         </div>
@@ -551,6 +565,14 @@ export function injectForm(html, pagePath = '') {
       const leadH2 = leadGrid.find('h2').first();
       if (leadH2.length && !leadH2.prev().hasClass('kicker-gold')) {
         leadH2.before('<span class="kicker-gold">Cotação Imediata</span>');
+      }
+
+      // Garante que os títulos internos da coluna de formulário sejam subtítulos H3 do bloco H2 principal
+      const formCol = leadGrid.find('.contact-form-col');
+      if (formCol.length) {
+        formCol.find('h2').each(function () {
+          $(this).replaceWith(`<h3>${$(this).text().trim()}</h3>`);
+        });
       }
     }
   }

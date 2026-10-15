@@ -652,7 +652,8 @@ p { margin: 0 0 1.1em; }
   width: 100%;
 }
 
-.contact-form-col h2 {
+.contact-form-col h2,
+.contact-form-col h3 {
   font-size: 1.35rem;
   font-weight: 700;
   margin-top: 0;
@@ -799,7 +800,9 @@ p { margin: 0 0 1.1em; }
   font-size: 1.1rem;
   flex-shrink: 0;
 }
-.tip-card-header h4 {
+.tip-card-header h3,
+.tip-card-header h4,
+.tip-card-title {
   margin: 0;
   font-size: 1.15rem;
   font-family: var(--font-head);
