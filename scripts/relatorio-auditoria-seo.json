@@ -1,0 +1,164 @@
+{
+  "resumoAuditoria": {
+    "totalPaginasAuditadas": 4068,
+    "titulosValidos": "4068 de 4068 (100.00%)",
+    "descricoesValidas": "4068 de 4068 (100.00%)",
+    "faixaTitulosEncontrada": "De 50 a 60 caracteres (Regra: 50 a 60)",
+    "faixaDescricoesEncontrada": "De 141 a 160 caracteres (Regra: 140 a 160)",
+    "ogSincronizado": "4068 de 4068",
+    "twitterSincronizado": "4068 de 4068",
+    "errosEncontrados": 0
+  },
+  "amostraEvidencias": [
+    {
+      "file": "aluguel-de-mini-van-7-lugares-aguas-de-lindoia.json",
+      "url": "https://alugueldevansp.com/aluguel-de-mini-van-7-lugares-aguas-de-lindoia/",
+      "title": "Aluguel de mini van com 7 lugares Águas de Lindóia",
+      "titleLength": 50,
+      "titleStatus": "✓ VÁLIDO (50-60)",
+      "description": "Aluguel de mini van com 7 lugares Águas de Lindóia para 7 passageiros com conforto, espaço para malas e economia em viagens e passeios. Solicite seu orçamento!",
+      "descriptionLength": 159,
+      "descriptionStatus": "✓ VÁLIDO (140-160)"
+    },
+    {
+      "file": "aluguel-de-mini-van-7-lugares.json",
+      "url": "https://alugueldevansp.com/aluguel-de-mini-van-7-lugares/",
+      "title": "Aluguel de mini van 7 lugares em SP | Frota Moderna e Segura",
+      "titleLength": 60,
+      "titleStatus": "✓ VÁLIDO (50-60)",
+      "description": "Aluguel de mini van 7 lugares para 7 passageiros com conforto, espaço para malas e economia em viagens e passeios. Peça sua cotação rápida e sem compromisso!",
+      "descriptionLength": 157,
+      "descriptionStatus": "✓ VÁLIDO (140-160)"
+    },
+    {
+      "file": "aluguel-de-minivan-7-lugares-moema.json",
+      "url": "https://alugueldevansp.com/aluguel-de-minivan-7-lugares-moema/",
+      "title": "Aluguel de minivan com 7 lugares em Moema: Transporte em SP",
+      "titleLength": 59,
+      "titleStatus": "✓ VÁLIDO (50-60)",
+      "description": "Aluguel de minivan com 7 lugares em Moema para 7 passageiros com conforto, espaço para malas e economia em viagens e passeios. Peça seu orçamento gratuito hoje!",
+      "descriptionLength": 160,
+      "descriptionStatus": "✓ VÁLIDO (140-160)"
+    },
+    {
+      "file": "aluguel-de-van-12-lugares.json",
+      "url": "https://alugueldevansp.com/aluguel-de-van-12-lugares/",
+      "title": "Aluguel de van 12 lugares com Motorista | Aluguel de Van SP",
+      "titleLength": 59,
+      "titleStatus": "✓ VÁLIDO (50-60)",
+      "description": "Aluguel de van 12 lugares para grupos médios com poltronas reclináveis, ar-condicionado e total conforto. Peça sua cotação rápida e sem compromisso!",
+      "descriptionLength": 148,
+      "descriptionStatus": "✓ VÁLIDO (140-160)"
+    },
+    {
+      "file": "aluguel-de-van-15-lugares-pinheiros.json",
+      "url": "https://alugueldevansp.com/aluguel-de-van-15-lugares-pinheiros/",
+      "title": "Aluguel de van com 15 lugares em Pinheiros: Transporte em SP",
+      "titleLength": 60,
+      "titleStatus": "✓ VÁLIDO (50-60)",
+      "description": "Aluguel de van com 15 lugares em Pinheiros para 15 passageiros com poltronas reclináveis, ar-condicionado e amplo bagageiro. Peça sua cotação online hoje mesmo!",
+      "descriptionLength": 160,
+      "descriptionStatus": "✓ VÁLIDO (140-160)"
+    },
+    {
+      "file": "aluguel-de-van-com-motorista-campinas.json",
+      "url": "https://alugueldevansp.com/aluguel-de-van-com-motorista-campinas/",
+      "title": "Aluguel de van com motorista em Campinas | Aluguel de Van SP",
+      "titleLength": 60,
+      "titleStatus": "✓ VÁLIDO (50-60)",
+      "description": "Aluguel de van com motorista em Campinas com motorista qualificado, pontualidade rigorosa e total conforto para viagens e eventos. Reserve sua van agora mesmo!",
+      "descriptionLength": 159,
+      "descriptionStatus": "✓ VÁLIDO (140-160)"
+    },
+    {
+      "file": "aluguel-de-van-com-motorista.json",
+      "url": "https://alugueldevansp.com/aluguel-de-van-com-motorista/",
+      "title": "Aluguel de van com motorista | Fretamento e Transporte em SP",
+      "titleLength": 60,
+      "titleStatus": "✓ VÁLIDO (50-60)",
+      "description": "Aluguel de van com motorista com motorista qualificado, pontualidade rigorosa e total conforto para viagens e eventos. Peça seu orçamento gratuito online agora!",
+      "descriptionLength": 160,
+      "descriptionStatus": "✓ VÁLIDO (140-160)"
+    },
+    {
+      "file": "aluguel-de-van-para-viagem-sorocaba.json",
+      "url": "https://alugueldevansp.com/aluguel-de-van-para-viagem-sorocaba/",
+      "title": "Aluguel de van para viagem em Sorocaba | Aluguel de Van SP",
+      "titleLength": 58,
+      "titleStatus": "✓ VÁLIDO (50-60)",
+      "description": "Aluguel de van para viagem em Sorocaba com poltronas reclináveis, ar-condicionado e amplo bagageiro para viagens e passeios. Peça sua cotação online hoje mesmo!",
+      "descriptionLength": 160,
+      "descriptionStatus": "✓ VÁLIDO (140-160)"
+    },
+    {
+      "file": "aluguel-de-van.json",
+      "url": "https://alugueldevansp.com/aluguel-de-van/",
+      "title": "Aluguel de van | Fretamento Executivo e Transporte em SP",
+      "titleLength": 56,
+      "titleStatus": "✓ VÁLIDO (50-60)",
+      "description": "Aluguel de van para viagens, eventos, traslados executivos e passeios com conforto e pontualidade. Peça sua cotação rápida e sem compromisso!",
+      "descriptionLength": 141,
+      "descriptionStatus": "✓ VÁLIDO (140-160)"
+    },
+    {
+      "file": "cases.json",
+      "url": "https://alugueldevansp.com/cases/",
+      "title": "Cases de Sucesso em Transporte | Aluguel de Van SP",
+      "titleLength": 50,
+      "titleStatus": "✓ VÁLIDO (50-60)",
+      "description": "Confira nossos cases de sucesso em transporte executivo, eventos e viagens em São Paulo. Clientes satisfeitos com pontualidade e total segurança. Veja!",
+      "descriptionLength": 151,
+      "descriptionStatus": "✓ VÁLIDO (140-160)"
+    },
+    {
+      "file": "contato.json",
+      "url": "https://alugueldevansp.com/contato/",
+      "title": "Fale Conosco: Atendimento 24h e Aluguel de Van em SP",
+      "titleLength": 52,
+      "titleStatus": "✓ VÁLIDO (50-60)",
+      "description": "Entre em contato com a Aluguel de Van SP. Atendimento 24 horas por WhatsApp, telefone ou e-mail para orçamentos e reservas rápidas. Fale conosco agora!",
+      "descriptionLength": 151,
+      "descriptionStatus": "✓ VÁLIDO (140-160)"
+    },
+    {
+      "file": "equipe.json",
+      "url": "https://alugueldevansp.com/equipe/",
+      "title": "Conheça Nossa Equipe de Motoristas | Aluguel de Van SP",
+      "titleLength": 54,
+      "titleStatus": "✓ VÁLIDO (50-60)",
+      "description": "Conheça a equipe da Aluguel de Van SP: motoristas experientes, habilitados e comprometidos com a sua segurança, conforto e pontualidade na viagem. Veja!",
+      "descriptionLength": 152,
+      "descriptionStatus": "✓ VÁLIDO (140-160)"
+    },
+    {
+      "file": "servicos.json",
+      "url": "https://alugueldevansp.com/servicos/",
+      "title": "Serviços de Aluguel de Vans em SP: Conforto e Segurança",
+      "titleLength": 55,
+      "titleStatus": "✓ VÁLIDO (50-60)",
+      "description": "Conheça todos os nossos serviços de aluguel de vans em SP: viagens, eventos, casamentos, traslados corporativos e diárias com motorista. Peça sua cotação!",
+      "descriptionLength": 154,
+      "descriptionStatus": "✓ VÁLIDO (140-160)"
+    },
+    {
+      "file": "sobre-nos.json",
+      "url": "https://alugueldevansp.com/sobre-nos/",
+      "title": "Sobre Nós: 12 Anos em Transporte e Aluguel de Van SP",
+      "titleLength": 52,
+      "titleStatus": "✓ VÁLIDO (50-60)",
+      "description": "Conheça a história da Aluguel de Van SP: mais de 12 anos de experiência em transporte executivo, frota regulamentada e pontualidade. Peça seu orçamento!",
+      "descriptionLength": 152,
+      "descriptionStatus": "✓ VÁLIDO (140-160)"
+    },
+    {
+      "file": "_home.json",
+      "url": "https://alugueldevansp.com/",
+      "title": "Aluguel de Van em SP com Motorista | Aluguel de Van SP",
+      "titleLength": 54,
+      "titleStatus": "✓ VÁLIDO (50-60)",
+      "description": "Alugue vans executivas em São Paulo com motorista para viagens, eventos e traslados. Frota moderna, conforto e segurança. Solicite seu orçamento gratuito!",
+      "descriptionLength": 154,
+      "descriptionStatus": "✓ VÁLIDO (140-160)"
+    }
+  ]
+}
