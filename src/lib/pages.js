@@ -47,6 +47,127 @@ export const LEAD_FORM = `<form class="lead-form" data-lead novalidate>
 import * as cheerio from 'cheerio';
 import { getButtonHrefForPage, WHATSAPP_REDIRECTS } from './whatsapp-links.js';
 
+// Ícones e SVG do Topo Hero Card (Imagem 2)
+const HERO_ICON_SMILE = `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#2e7d32" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>`;
+
+const HERO_ICON_PEACE = `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#2e7d32" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v8"/><path d="M10 8V5a2 2 0 0 0-2-2 2 2 0 0 0-2 2v10a6 6 0 0 0 6 6 6 6 0 0 0 6-6V9a2 2 0 0 0-2-2 2 2 0 0 0-2 2v3"/></svg>`;
+
+const HERO_ICON_SHIELD = `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#2e7d32" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`;
+
+const HERO_ARROW_PREV = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#2b2622" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>`;
+
+const HERO_ARROW_NEXT = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#2b2622" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>`;
+
+const HERO_WHATSAPP_ICON = `<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>`;
+
+export function getVehicleImagesForPath(pagePath = '') {
+  const p = pagePath.toLowerCase();
+
+  // 1. Carga / Furgão: SEM JANELAS LATERAIS
+  if (p.includes('carga') || p.includes('furgao') || p.includes('furgão')) {
+    return [
+      { src: '/wp-content/uploads/2025/07/Van-Citroen-branca-de-carga.webp', alt: 'Van Citroën de carga sem janelas' },
+      { src: '/wp-content/uploads/2025/07/Master-furgao.webp', alt: 'Van Renault Master furgão de carga' },
+      { src: '/wp-content/uploads/2025/06/Van-Citroen.webp', alt: 'Van utilitária de carga Citroën' }
+    ];
+  }
+
+  // 2. Minivans: 5 a 7 lugares
+  if (p.includes('mini-van') || p.includes('minivan')) {
+    return [
+      { src: '/wp-content/uploads/2025/07/Mercedes-Benz-Minivan-prata.webp', alt: 'Minivan Mercedes-Benz executiva' },
+      { src: '/wp-content/uploads/2025/07/Spin-Chevrolet-Minivan-1024x576.webp', alt: 'Minivan Chevrolet Spin 7 lugares' },
+      { src: '/wp-content/uploads/2025/07/Mercedes-Benz-Minivan.webp', alt: 'Minivan executiva confortável' }
+    ];
+  }
+
+  // 3. Vans de passageiros, 15 lugares, turismo, com motorista, etc.: COM JANELAS
+  return [
+    { src: '/wp-content/uploads/2025/07/Van-Mercedes-Benz-branca.webp', alt: 'Van Mercedes-Benz executiva com janelas' },
+    { src: '/wp-content/uploads/2025/07/Van-Sprinter-prata.webp', alt: 'Van Sprinter prata com janelas' },
+    { src: '/wp-content/uploads/2025/07/Van-Renault-Master-15-lugares.webp', alt: 'Van Renault Master 15 lugares' },
+    { src: '/wp-content/uploads/2025/06/Van-Mercedes-Benz-Sprinter.webp', alt: 'Van Sprinter turismo' }
+  ];
+}
+
+export function buildServiceHeroCard(pagePath, buttonHref, benefits = []) {
+  const images = getVehicleImagesForPath(pagePath);
+
+  const defaultBenefits = [
+    {
+      title: 'Economia para grupos',
+      text: 'Viaje junto e divida os custos de locação, combustível e pedágios, garantindo uma opção muito mais econômica do que vários carros.'
+    },
+    {
+      title: 'Mais conforto e espaço',
+      text: 'Amplo espaço interno, poltronas reclináveis, ar-condicionado potente e porta-malas generoso para uma viagem sem aperto.'
+    },
+    {
+      title: 'Segurança',
+      text: 'Veículos revisados e higienizados com opção de motorista profissional para uma viagem tranquila, pontual e segura.'
+    }
+  ];
+
+  const finalBenefits = [
+    benefits[0] || defaultBenefits[0],
+    benefits[1] || defaultBenefits[1],
+    benefits[2] || defaultBenefits[2]
+  ];
+
+  const icons = [HERO_ICON_SMILE, HERO_ICON_PEACE, HERO_ICON_SHIELD];
+
+  const slidesHtml = images.map((img, idx) => `
+    <div role="group" aria-roledescription="slide" class="service-slide ${idx === 0 ? 'is-active' : ''}" style="${idx === 0 ? 'display: block;' : 'display: none;'}">
+      <div class="service-slide-inner">
+        <img src="${img.src}" alt="${img.alt}" width="540" height="340" loading="${idx === 0 ? 'eager' : 'lazy'}" />
+      </div>
+    </div>
+  `).join('');
+
+  const cardsHtml = finalBenefits.map((b, idx) => `
+    <div class="service-benefit-card">
+      <div class="benefit-card-header">
+        <span class="benefit-card-icon" aria-hidden="true">${icons[idx]}</span>
+        <h3 class="benefit-card-title">${b.title}</h3>
+      </div>
+      <p class="benefit-card-desc">${b.text}</p>
+    </div>
+  `).join('');
+
+  return `
+    <section class="service-hero-compare-section">
+      <div class="service-hero-card">
+        <div class="service-hero-grid">
+          <div class="service-hero-left">
+            <div class="service-carousel-box">
+              <div role="region" aria-roledescription="carousel" aria-label="Galeria de vans" class="service-carousel-region">
+                <div class="service-carousel-slides" aria-live="polite">
+                  ${slidesHtml}
+                </div>
+                <button type="button" role="button" aria-label="Imagem anterior" class="carousel-nav-btn carousel-btn-prev">
+                  ${HERO_ARROW_PREV}
+                </button>
+                <button type="button" role="button" aria-label="Próxima imagem" class="carousel-nav-btn carousel-btn-next">
+                  ${HERO_ARROW_NEXT}
+                </button>
+              </div>
+            </div>
+            <div class="service-hero-cta-wrap">
+              <a href="${buttonHref}" target="_blank" rel="noopener noreferrer" class="btn-chamativo service-hero-whatsapp-btn">
+                ${HERO_WHATSAPP_ICON}
+                <span>Solicitar orçamento</span>
+              </a>
+            </div>
+          </div>
+          <div class="service-hero-right">
+            ${cardsHtml}
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
 export function buildWhatsAppCta(buttonHref) {
   return `<div class="btn-whatsapp-wrapper text-center">
   <a href="${buttonHref}" target="_blank" rel="noopener noreferrer" class="btn-chamativo btn-whatsapp-cta" aria-label="Solicitar orçamento no WhatsApp">
@@ -154,8 +275,44 @@ export function injectForm(html, pagePath = '') {
 
   // 3.5. Estrutura os módulos das páginas de serviço em seções alternadas (Branco / Escuro)
   if (pagePath && pagePath.startsWith('/aluguel-') && pagePath !== '/servicos/') {
-    // 1. Bloco de Razões (Escuro - igual à imagem)
+    // 0. Hero Card Superior com Carrossel e Benefícios (Design da Imagem 2)
     const reasonsH2 = $('h2').filter((_, el) => /razões|escolhem/i.test($(el).text())).first();
+    if (reasonsH2.length) {
+      // Extrai o link de orçamento antes de remover o topo original
+      let heroButtonHref = '';
+      const topLink = $('a').filter((_, el) => {
+        const h = $(el).attr('href') || '';
+        return h.includes('aluguel-de-van') || h.includes('whatsapp') || h.includes('orcamento');
+      }).first();
+      if (topLink.length) {
+        heroButtonHref = topLink.attr('href') || '';
+      }
+      if (!heroButtonHref) heroButtonHref = getButtonHrefForPage(pagePath);
+
+      // Extrai os benefícios existentes do topo (h2 anteriores a reasonsH2)
+      const topBenefits = [];
+      $('h2').each((_, el) => {
+        const h2El = $(el);
+        const text = h2El.text().trim();
+        if (/razões|escolhem|dicas|orçamento|formulário|econômicas|quando reservar/i.test(text)) return false;
+        
+        const p = h2El.closest('div').next().find('p').first().text().trim() ||
+                  h2El.parent().next().find('p').first().text().trim() ||
+                  h2El.next('p').text().trim();
+        if (text) {
+          topBenefits.push({ title: text, text: p });
+        }
+      });
+
+      // Remove a div antiga com imagem solta, botão solto e os 3 h2 soltos
+      reasonsH2.prevAll().remove();
+
+      // Insere o novo container Hero Card da Imagem 2
+      const heroCardHtml = buildServiceHeroCard(pagePath, heroButtonHref, topBenefits);
+      reasonsH2.before(heroCardHtml);
+    }
+
+    // 1. Bloco de Razões (Escuro - igual à imagem)
     if (reasonsH2.length) {
       const title = reasonsH2.text().trim();
       let desc = '';
