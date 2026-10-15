@@ -75,6 +75,26 @@ const WHATS_PHONE = '11975413120';
       })(window, document, 'script', 'dataLayer', GTM);
     </script>
     <!-- End Google Tag Manager -->
+
+    <!-- Smartlook -->
+    <script is:inline define:vars={{ SMARTLOOK }}>
+      window.smartlook ||
+        (function (d) {
+          var o = (window.smartlook = function () {
+              o.api.push(arguments);
+            }),
+            h = d.getElementsByTagName('head')[0];
+          var c = d.createElement('script');
+          o.api = new Array();
+          c.async = true;
+          c.type = 'text/javascript';
+          c.charset = 'utf-8';
+          c.src = 'https://web-sdk.smartlook.com/recorder.js';
+          h.appendChild(c);
+        })(document);
+      smartlook('init', SMARTLOOK, { region: 'eu' });
+    </script>
+    <!-- End Smartlook -->
   </head>
   <body class={page.path === '/' ? 'is-home' : 'is-inner'}>
     <!-- Google Tag Manager (noscript) -->
@@ -221,24 +241,6 @@ const WHATS_PHONE = '11975413120';
           buttons[1].addEventListener('click', function (e) { e.preventDefault(); show(idx + 1); });
         }
         setInterval(function () { show(idx + 1); }, 4500);
-      });
-
-      // Smartlook carregado após o load para não pesar no LCP
-      window.addEventListener('load', function () {
-        setTimeout(function () {
-          window.smartlook || (function (d) {
-            var o = (window.smartlook = function () { o.api.push(arguments); }),
-              h = d.getElementsByTagName('head')[0];
-            var c = d.createElement('script');
-            o.api = [];
-            c.async = true;
-            c.type = 'text/javascript';
-            c.charset = 'utf-8';
-            c.src = 'https://web-sdk.smartlook.com/recorder.js';
-            h.appendChild(c);
-          })(document);
-          window.smartlook('init', 'cdb7af192602f715a74697a72011cce673c46396', { region: 'eu' });
-        }, 2500);
       });
     </script>
 
