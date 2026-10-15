@@ -10,7 +10,7 @@
     "crawl": "node scripts/crawl.mjs",
     "images": "node scripts/images.mjs",
     "sitemaps": "node scripts/build-sitemaps.mjs",
-    "build": "node scripts/build-sitemaps.mjs && astro build",
+    "build": "node scripts/build-sitemaps.mjs && node --max-old-space-size=4096 ./node_modules/astro/bin/astro.mjs build",
     "preview": "astro preview",
     "astro": "astro"
   },

@@ -1,12 +1,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const DIR = path.resolve('src/data/pages');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const DIR = path.resolve(__dirname, '../data/pages');
 let cache;
 
 /** Carrega todas as páginas extraídas do WordPress (JSON por URL). */
 export function loadPages() {
-  if (import.meta.env.PROD && cache) return cache;
+  if (import.meta.env?.PROD && cache) return cache;
   cache = fs
     .readdirSync(DIR)
     .filter((f) => f.endsWith('.json'))

@@ -3,8 +3,10 @@
 // incluindo apenas URLs que existem no build. Roda automaticamente antes do build.
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const ROOT = path.resolve(import.meta.dirname, '..');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(__dirname, '..');
 const ORIGIN = 'https://alugueldevansp.com';
 const urls = JSON.parse(await fs.readFile(path.join(ROOT, 'src/data/urls.json'), 'utf8'));
 const pagesDir = path.join(ROOT, 'src/data/pages');
