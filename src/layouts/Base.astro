@@ -47,6 +47,22 @@ const WHATS_PHONE = '11975413120';
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap"
     />
     <meta name="generator" content="Astro" />
+    <meta name="generator" content="Site Kit by Google 1.188.0" />
+    {page.googleSiteVerification && <meta name="google-site-verification" content={page.googleSiteVerification} />}
+
+    <!-- Google Tag (gtag.js) / Google Analytics -->
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA}`}></script>
+    <script is:inline define:vars={{ GA }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('set', 'linker', { domains: ['alugueldevansp.com'] });
+      gtag('js', new Date());
+      gtag('set', 'developer_id.dZTNiMT', true);
+      gtag('config', GA, { googlesitekit_post_type: 'page' });
+    </script>
+
+    <!-- Google Tag Manager -->
     <script is:inline define:vars={{ GTM }}>
       window.dataLayer = window.dataLayer || [];
       (function (w, d, s, l, i) {
@@ -58,18 +74,12 @@ const WHATS_PHONE = '11975413120';
         f.parentNode.insertBefore(j, f);
       })(window, document, 'script', 'dataLayer', GTM);
     </script>
-    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA}`}></script>
-    <script is:inline define:vars={{ GA }}>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      window.gtag = gtag;
-      gtag('set', 'linker', { domains: ['alugueldevansp.com'] });
-      gtag('js', new Date());
-      gtag('config', GA);
-    </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body class={page.path === '/' ? 'is-home' : 'is-inner'}>
+    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${GTM}`} height="0" width="0" style="display:none;visibility:hidden" title="gtm"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <a class="skip-link" href="#content">Pular para o conteúdo</a>
 
     <header class="site-header" id="masthead">
