@@ -2,17 +2,29 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DIR = path.resolve(__dirname, '../data/pages');
+function resolvePagesDir() {
+  const candidates = [
+    path.resolve(process.cwd(), 'src/data/pages'),
+    path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../../../src/data/pages'),
+    path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../../src/data/pages'),
+    path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../data/pages'),
+  ];
+  for (const dir of candidates) {
+    if (fs.existsSync(dir)) return dir;
+  }
+  return path.resolve(process.cwd(), 'src/data/pages');
+}
+
 let cache;
 
 /** Carrega todas as páginas extraídas do WordPress (JSON por URL). */
 export function loadPages() {
   if (import.meta.env?.PROD && cache) return cache;
+  const dir = resolvePagesDir();
   cache = fs
-    .readdirSync(DIR)
+    .readdirSync(dir)
     .filter((f) => f.endsWith('.json'))
-    .map((f) => JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8')));
+    .map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')));
   return cache;
 }
 
