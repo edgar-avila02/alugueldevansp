@@ -2466,27 +2466,20 @@ p { margin: 0 0 1.1em; }
   width: 100%;
 }
 
-.service-carousel-box {
+.service-carousel-box,
+.service-carousel-region,
+.service-carousel-slides,
+.service-slide {
   position: relative;
   width: 100%;
-  max-width: 440px;
-}
-
-.service-carousel-region {
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.service-carousel-slides {
-  width: 100%;
-  position: relative;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
 }
 
 .service-slide {
-  width: 100%;
   transition: opacity 0.3s ease;
 }
 
@@ -2495,18 +2488,31 @@ p { margin: 0 0 1.1em; }
   align-items: center;
   justify-content: center;
   min-height: 250px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2.8rem;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
-.service-slide-inner img {
-  max-width: 100%;
-  height: auto;
-  max-height: 250px;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.08));
+.service-slide-inner img,
+.service-hero-card .service-slide-inner img,
+.prose .service-hero-card .service-slide-inner img,
+.is-service-page .service-hero-card img {
+  max-width: 82% !important;
+  height: auto !important;
+  max-height: 250px !important;
+  object-fit: contain !important;
+  margin: 0 auto !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  filter: none !important;
 }
 
-/* Setas Circulares nos lados */
+/* Setas Circulares nos lados - Mais afastadas do veículo */
 .carousel-nav-btn {
   position: absolute;
   top: 50%;
@@ -2538,11 +2544,11 @@ p { margin: 0 0 1.1em; }
 }
 
 .carousel-btn-prev {
-  left: -20px;
+  left: -28px;
 }
 
 .carousel-btn-next {
-  right: -20px;
+  right: -28px;
 }
 
 /* Botão Chamativo do WhatsApp */
@@ -2661,11 +2667,14 @@ p { margin: 0 0 1.1em; }
     padding: 30px 24px;
     border-radius: 20px;
   }
+  .service-slide-inner {
+    padding: 0.5rem 2.2rem;
+  }
   .carousel-btn-prev {
-    left: -10px;
+    left: -16px;
   }
   .carousel-btn-next {
-    right: -10px;
+    right: -16px;
   }
 }
 
@@ -2678,20 +2687,25 @@ p { margin: 0 0 1.1em; }
     border-radius: 18px;
   }
   .service-slide-inner {
-    min-height: 200px;
+    min-height: 190px;
+    padding: 0.5rem 1.8rem;
   }
-  .service-slide-inner img {
-    max-height: 200px;
+  .service-slide-inner img,
+  .service-hero-card .service-slide-inner img,
+  .prose .service-hero-card .service-slide-inner img,
+  .is-service-page .service-hero-card img {
+    max-width: 86% !important;
+    max-height: 190px !important;
   }
   .carousel-nav-btn {
     width: 38px;
     height: 38px;
   }
   .carousel-btn-prev {
-    left: 2px;
+    left: -6px;
   }
   .carousel-btn-next {
-    right: 2px;
+    right: -6px;
   }
   .service-hero-whatsapp-btn {
     width: 100%;
