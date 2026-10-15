@@ -2479,6 +2479,10 @@ p { margin: 0 0 1.1em; }
   border-radius: 0 !important;
 }
 
+.service-carousel-box {
+  max-width: 490px;
+}
+
 .service-slide {
   transition: opacity 0.3s ease;
 }
@@ -2487,8 +2491,8 @@ p { margin: 0 0 1.1em; }
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 250px;
-  padding: 0.5rem 2.8rem;
+  min-height: 295px;
+  padding: 0.5rem 1.8rem;
   background: transparent !important;
   background-color: transparent !important;
   box-shadow: none !important;
@@ -2499,9 +2503,9 @@ p { margin: 0 0 1.1em; }
 .service-hero-card .service-slide-inner img,
 .prose .service-hero-card .service-slide-inner img,
 .is-service-page .service-hero-card img {
-  max-width: 82% !important;
+  max-width: 92% !important;
   height: auto !important;
-  max-height: 250px !important;
+  max-height: 290px !important;
   object-fit: contain !important;
   margin: 0 auto !important;
   background: transparent !important;
@@ -2512,7 +2516,7 @@ p { margin: 0 0 1.1em; }
   filter: none !important;
 }
 
-/* Setas Circulares nos lados - Mais afastadas do veículo */
+/* Setas Circulares nos lados - Afastadas do veículo */
 .carousel-nav-btn {
   position: absolute;
   top: 50%;
@@ -2544,11 +2548,11 @@ p { margin: 0 0 1.1em; }
 }
 
 .carousel-btn-prev {
-  left: -28px;
+  left: -22px;
 }
 
 .carousel-btn-next {
-  right: -28px;
+  right: -22px;
 }
 
 /* Botão Chamativo do WhatsApp */
