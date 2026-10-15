@@ -41,4 +41,7 @@ await fs.writeFile(
   path.join(out, 'sitemap_index.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${index.join('\n')}\n</sitemapindex>\n`,
 );
-console.log(`Sitemaps gerados: ${groups.size} arquivos, ${[...groups.values()].flat().length} URLs`);
+// sitemap.xml único com TODAS as páginas (https://alugueldevansp.com/sitemap.xml)
+const all = [...groups.values()].flat();
+await fs.writeFile(path.join(out, 'sitemap.xml'), urlset(all));
+console.log(`Sitemaps gerados: ${groups.size} arquivos, ${all.length} URLs (+ sitemap.xml único)`);
