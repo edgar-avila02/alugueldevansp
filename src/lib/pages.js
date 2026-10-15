@@ -938,6 +938,21 @@ export function injectForm(html, pagePath = '') {
     }
   }
 
+  // Otimização de Imagens para Performance e LCP
+  const allImages = $('img');
+  if (allImages.length > 0) {
+    const firstImg = allImages.first();
+    firstImg.removeAttr('loading');
+    firstImg.attr('fetchpriority', 'high');
+    firstImg.attr('decoding', 'async');
+
+    allImages.slice(1).each(function () {
+      const img = $(this);
+      if (!img.attr('loading')) img.attr('loading', 'lazy');
+      if (!img.attr('decoding')) img.attr('decoding', 'async');
+    });
+  }
+
   return $('body').length ? $('body').html() : $.html();
 }
 

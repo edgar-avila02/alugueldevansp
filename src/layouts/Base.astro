@@ -40,12 +40,31 @@ const WHATS_PHONE = '11975413120';
     {page.twitter?.map(([k, v]) => <meta name={k} content={v} />)}
     {jsonld.map((j: string) => <script type="application/ld+json" class="rank-math-schema" set:html={j} />)}
     {site.icons.map((i) => <link rel={i.rel} href={i.href} sizes={i.sizes ?? undefined} />)}
+    {page.path === '/' ? (
+      <link rel="preload" as="image" href="/images/hero-van.webp" type="image/webp" fetchpriority="high" />
+    ) : page.featuredImage ? (
+      <link rel="preload" as="image" href={page.featuredImage} fetchpriority="high" />
+    ) : null}
+    <link rel="preload" as="image" href={site.logo} type="image/webp" fetchpriority="high" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap"
+      />
+    </noscript>
     <meta name="generator" content="Astro" />
     <meta name="generator" content="Site Kit by Google 1.188.0" />
     {page.googleSiteVerification && <meta name="google-site-verification" content={page.googleSiteVerification} />}

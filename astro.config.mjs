@@ -14,7 +14,10 @@ for (const [src, dest] of Object.entries(WHATSAPP_REDIRECTS)) {
 export default defineConfig({
   site: 'https://alugueldevansp.com',
   trailingSlash: 'always',
-  build: { format: 'directory' },
+  build: {
+    format: 'directory',
+    inlineStylesheets: 'always',
+  },
   compressHTML: true,
   redirects,
 });
