@@ -113,8 +113,11 @@ export function getButtonHrefForPage(path = '') {
   if (p.includes('/aluguel-de-van-para-casamento')) {
     return '/aluguel-de-van-para-casamento-1/';
   }
+  if (p.includes('guarulhos')) {
+    return 'https://alugueldevansp.com/aluguel-de-van-1';
+  }
   if (p.includes('/aluguel-de-van')) {
-    return '/aluguel-de-van-oficial-1/';
+    return 'https://alugueldevansp.com/aluguel-de-van-1';
   }
 
   // Demais páginas no site

@@ -19,7 +19,7 @@ let cache;
 
 /** Carrega todas as páginas extraídas do WordPress (JSON por URL). */
 export function loadPages() {
-  if (import.meta.env?.PROD && cache) return cache;
+  if (cache) return cache;
   const dir = resolvePagesDir();
   cache = fs
     .readdirSync(dir)
@@ -189,14 +189,19 @@ export function injectForm(html, pagePath = '') {
   $('img[src*="Botao-de-whatsapp"], img[alt*="whatsapp" i]').each(function () {
     const img = $(this);
     const anchor = img.closest('a');
-    let buttonHref = (anchor.attr('href') || '').trim();
-    if (buttonHref) {
-      buttonHref = buttonHref.replace(/^https?:\/\/(?:www\.)?alugueldevansp\.com/i, '').replace(/\/$/, '');
-    }
-    if (!buttonHref || buttonHref === '#' || buttonHref.startsWith('javascript:') || !WHATSAPP_REDIRECTS[buttonHref]) {
-      buttonHref = getButtonHrefForPage(pagePath);
-    } else if (!buttonHref.endsWith('/')) {
-      buttonHref += '/';
+    let buttonHref = '';
+    if (pagePath.includes('guarulhos')) {
+      buttonHref = 'https://alugueldevansp.com/aluguel-de-van-1';
+    } else {
+      buttonHref = (anchor.attr('href') || '').trim();
+      if (buttonHref) {
+        buttonHref = buttonHref.replace(/^https?:\/\/(?:www\.)?alugueldevansp\.com/i, '').replace(/\/$/, '');
+      }
+      if (!buttonHref || buttonHref === '#' || buttonHref.startsWith('javascript:') || !WHATSAPP_REDIRECTS[buttonHref]) {
+        buttonHref = getButtonHrefForPage(pagePath);
+      } else if (!buttonHref.endsWith('/')) {
+        buttonHref += '/';
+      }
     }
     const ctaMarkup = buildWhatsAppCta(buttonHref);
     const target = anchor.length ? anchor : img;
@@ -215,6 +220,12 @@ export function injectForm(html, pagePath = '') {
   // Normaliza quaisquer links que apontam para rotas -1 legadas no corpo do texto
   $('a[href*="-1"]').each(function () {
     const a = $(this);
+    if (pagePath.includes('guarulhos')) {
+      a.attr('href', 'https://alugueldevansp.com/aluguel-de-van-1');
+      a.attr('target', '_blank');
+      a.attr('rel', 'noopener noreferrer');
+      return;
+    }
     let href = (a.attr('href') || '').trim().replace(/^https?:\/\/(?:www\.)?alugueldevansp\.com/i, '').replace(/\/$/, '');
     if (WHATSAPP_REDIRECTS[href]) {
       a.attr('href', href + '/');
@@ -280,14 +291,18 @@ export function injectForm(html, pagePath = '') {
     if (reasonsH2.length) {
       // Extrai o link de orçamento antes de remover o topo original
       let heroButtonHref = '';
-      const topLink = $('a').filter((_, el) => {
-        const h = $(el).attr('href') || '';
-        return h.includes('aluguel-de-van') || h.includes('whatsapp') || h.includes('orcamento');
-      }).first();
-      if (topLink.length) {
-        heroButtonHref = topLink.attr('href') || '';
+      if (pagePath.includes('guarulhos')) {
+        heroButtonHref = 'https://alugueldevansp.com/aluguel-de-van-1';
+      } else {
+        const topLink = $('a').filter((_, el) => {
+          const h = $(el).attr('href') || '';
+          return h.includes('aluguel-de-van') || h.includes('whatsapp') || h.includes('orcamento');
+        }).first();
+        if (topLink.length) {
+          heroButtonHref = topLink.attr('href') || '';
+        }
+        if (!heroButtonHref) heroButtonHref = getButtonHrefForPage(pagePath);
       }
-      if (!heroButtonHref) heroButtonHref = getButtonHrefForPage(pagePath);
 
       // Extrai os benefícios existentes do topo (h2 ou h3 anteriores a reasonsH2)
       const topBenefits = [];
