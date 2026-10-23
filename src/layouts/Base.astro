@@ -136,7 +136,7 @@ const WHATS_PHONE = '11975413120';
             ))}
           </ul>
         </nav>
-        <a class="btn btn-sm btn-chamativo header-cta" href={headerCtaHref} rel="nofollow">{site.ctaLabel}</a>
+        <a class="btn btn-sm btn-chamativo header-cta" href={headerCtaHref} target="_blank" rel="noopener noreferrer nofollow">{site.ctaLabel}</a>
         <button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false" aria-label="Abrir menu">
           <span></span><span></span><span></span>
         </button>
@@ -331,7 +331,7 @@ const WHATS_PHONE = '11975413120';
         }
         function isCtaLink(a) {
           var h = (a.getAttribute('href') || '').split(/[?#]/)[0];
-          return /-1\/?$/.test(h);
+          return /-1\/?$/.test(h) || /solicite-um-orcamento\/?$/.test(h);
         }
         function restore(a) {
           if (!a.dataset.cleanHref) a.dataset.cleanHref = cleanHref(a.getAttribute('href'));

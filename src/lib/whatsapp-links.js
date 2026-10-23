@@ -64,7 +64,7 @@ export const WHATSAPP_REDIRECTS = {
 
   // 15. Demais páginas no site / Botões gerais
   '/solicite-um-orcamento':
-    'https://wa.me/5511975413120?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20servi%C3%A7o%20de%20aluguel%20de%20van.%20Aluguel%20de%20van.',
+    'https://api.whatsapp.com/send/?phone=5511975413120&text=Ol%C3%A1%21+Gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+o+servi%C3%A7o+de+aluguel+de+van.+Aluguel+de+van.&type=phone_number&app_absent=0',
 };
 
 /**
