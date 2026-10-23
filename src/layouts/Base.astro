@@ -19,7 +19,11 @@ interface Props {
 
 const { page } = Astro.props;
 const path = page.path;
-const floatingButtonHref = getButtonHrefForPage(path);
+const is12Lugares = path.includes('12-lugares');
+const floatingButtonHref = is12Lugares
+  ? 'https://alugueldevansp.com/aluguel-de-van-12-lugares-1'
+  : (path.startsWith('/aluguel-') ? getButtonHrefForPage(path) : 'https://alugueldevansp.com/solicite-um-orcamento');
+const headerCtaHref = 'https://alugueldevansp.com/solicite-um-orcamento';
 const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
 const GTM = 'GTM-5B26SFDP';
 const GA = 'GT-5D4TQKHM';
@@ -75,7 +79,6 @@ const WHATS_PHONE = '11975413120';
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       window.gtag = gtag;
-      gtag('set', 'linker', { domains: ['alugueldevansp.com'] });
       gtag('js', new Date());
       gtag('set', 'developer_id.dZTNiMT', true);
       gtag('config', GA, { googlesitekit_post_type: 'page' });
@@ -133,7 +136,7 @@ const WHATS_PHONE = '11975413120';
             ))}
           </ul>
         </nav>
-        <a class="btn btn-sm btn-chamativo header-cta" href={site.ctaHref} rel="nofollow">{site.ctaLabel}</a>
+        <a class="btn btn-sm btn-chamativo header-cta" href={headerCtaHref} rel="nofollow">{site.ctaLabel}</a>
         <button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false" aria-label="Abrir menu">
           <span></span><span></span><span></span>
         </button>
@@ -312,6 +315,47 @@ const WHATS_PHONE = '11975413120';
         window.addEventListener('scroll', updateStickyVisibility, { passive: true });
         window.addEventListener('resize', updateStickyVisibility, { passive: true });
         updateStickyVisibility();
+      })();
+    </script>
+
+    <script is:inline>
+      // Garante que os links dos botões (rotas -1) abram sempre limpos, sem ?_gl= do linker do Google
+      (function () {
+        function cleanHref(href) {
+          try {
+            var u = new URL(href, location.href);
+            u.searchParams.delete('_gl');
+            u.searchParams.delete('_ga');
+            return u.toString().replace(/\?$/, '');
+          } catch (e) { return href; }
+        }
+        function isCtaLink(a) {
+          var h = (a.getAttribute('href') || '').split(/[?#]/)[0];
+          return /-1\/?$/.test(h);
+        }
+        function restore(a) {
+          if (!a.dataset.cleanHref) a.dataset.cleanHref = cleanHref(a.getAttribute('href'));
+          a.setAttribute('href', a.dataset.cleanHref);
+        }
+        // Salva a URL original antes de qualquer decoração
+        document.querySelectorAll('a[href]').forEach(function (a) {
+          if (isCtaLink(a)) a.dataset.cleanHref = cleanHref(a.getAttribute('href'));
+        });
+        ['mousedown', 'mouseup', 'keyup', 'touchend', 'contextmenu'].forEach(function (ev) {
+          document.addEventListener(ev, function (e) {
+            var a = e.target.closest && e.target.closest('a[href]');
+            if (a && isCtaLink(a)) setTimeout(function () { restore(a); }, 0);
+          }, true);
+        });
+        window.addEventListener('click', function (e) {
+          var a = e.target.closest && e.target.closest('a[href]');
+          if (!a || !isCtaLink(a)) return;
+          if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) { restore(a); return; }
+          var url = a.dataset.cleanHref || cleanHref(a.getAttribute('href'));
+          e.preventDefault(); // não interrompe a propagação: o GTM continua registrando o clique
+          if (a.target === '_blank') window.open(url, '_blank', 'noopener');
+          else location.href = url;
+        }, true);
       })();
     </script>
   </body>

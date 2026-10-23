@@ -10,65 +10,15 @@ interface Props {
 }
 
 const { page } = Astro.props;
-const pageTitle = page.h1 || page.title || 'Aluguel de Van SP';
-const buttonLink = getButtonHrefForPage(page.path);
+const buttonLink = page.path.includes('12-lugares')
+  ? 'https://alugueldevansp.com/aluguel-de-van-12-lugares-1'
+  : getButtonHrefForPage(page.path);
 ---
 
 <div class="service-extras">
-  <!-- MÓDULO 1: BRANCO — Depoimentos dos clientes & Parceiros homologados -->
-  <section class="section-light section-testimonials">
-    <div class="section-head text-center">
-      <span class="badge-pill">Avaliações 5 estrelas</span>
-      <h2>Veja o que os clientes estão dizendo:</h2>
-      <p class="section-sub">Mais de 1.500 viagens realizadas com nota máxima em conforto, segurança e pontualidade.</p>
-    </div>
-
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p class="testimonial-text">
-          “Serviço impecável! A van estava extremamente limpa e nova. O motorista foi muito pontual e cordial durante toda a viagem para o litoral. Super recomendo!”
-        </p>
-        <div class="client-info">
-          <img src="/images/depoimentos/cliente-1.jpg" alt="Mariana Silva" width="60" height="60" loading="lazy" class="client-avatar" />
-          <div>
-            <strong>Mariana Silva</strong>
-            <span>Passeio em família</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p class="testimonial-text">
-          “Alugamos para nossa equipe participar de uma convenção em Campinas. Pontualidade britânica, conforto total e excelente atendimento no WhatsApp do início ao fim.”
-        </p>
-        <div class="client-info">
-          <img src="/images/depoimentos/cliente-2.jpg" alt="Rodrigo Almeida" width="60" height="60" loading="lazy" class="client-avatar" />
-          <div>
-            <strong>Rodrigo Almeida</strong>
-            <span>Evento corporativo</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p class="testimonial-text">
-          “Contratamos o transporte para os convidados do nosso casamento. Todos elogiaram o conforto e a tranquilidade. Sem dúvidas a melhor empresa de vans de SP!”
-        </p>
-        <div class="client-info">
-          <img src="/images/depoimentos/cliente-3.jpg" alt="Camila Rocha" width="60" height="60" loading="lazy" class="client-avatar" />
-          <div>
-            <strong>Camila Rocha</strong>
-            <span>Casamento e celebração</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Parceiros e Órgãos Reguladores integrados na seção de confiança -->
-    <div class="partners-block">
+  <!-- MÓDULO 1: BRANCO — Parceiros e Órgãos Reguladores Homologados -->
+  <section class="section-light section-partners">
+    <div class="partners-block" style="margin-top: 0; padding-top: 0; border-top: none;">
       <div class="partners-head text-center">
         <h3>Veículos 100% regulamentados e homologados</h3>
         <p>Autorizados pelos principais órgãos de fiscalização de transporte público e rodoviário:</p>
@@ -181,17 +131,17 @@ const buttonLink = getButtonHrefForPage(page.path);
       <div class="steps-dark-grid">
         <div class="step-dark-card">
           <div class="step-circle">1</div>
-          <h3>Envie seu Roteiro</h3>
+          <h3>Envie seu roteiro</h3>
           <p>Informe pelo WhatsApp ou formulário: data, destino, horário e quantidade de passageiros.</p>
         </div>
         <div class="step-dark-card">
           <div class="step-circle">2</div>
-          <h3>Receba a Proposta</h3>
+          <h3>Receba a proposta</h3>
           <p>Enviamos em minutos o orçamento detalhado com o modelo de van ideal e todos os itens inclusos.</p>
         </div>
         <div class="step-dark-card">
           <div class="step-circle">3</div>
-          <h3>Embarque e Curta</h3>
+          <h3>Embarque e curta</h3>
           <p>A van chega pontualmente no endereço combinado. É só entrar, relaxar e aproveitar cada quilômetro!</p>
         </div>
       </div>
@@ -447,6 +397,7 @@ const buttonLink = getButtonHrefForPage(page.path);
   /* Cabeçalhos Claras */
   .section-head {
     margin-bottom: 2.75rem;
+    text-align: center;
   }
 
   .section-head h2 {
@@ -455,6 +406,16 @@ const buttonLink = getButtonHrefForPage(page.path);
     color: var(--ink);
     margin-bottom: 0.5rem;
     font-weight: 700;
+    text-align: center;
+  }
+
+  /* Remove barra decorativa prose de todos os H2 nos módulos de landing */
+  .service-extras h2::before,
+  .service-extras .section-head h2::before,
+  .service-extras .section-head-dark h2::before,
+  .service-extras .steps-dark-head h2::before {
+    display: none !important;
+    content: none !important;
   }
 
   .section-sub {
@@ -463,6 +424,7 @@ const buttonLink = getButtonHrefForPage(page.path);
     max-width: 680px;
     margin: 0 auto;
     line-height: 1.6;
+    text-align: center;
   }
 
   .badge-pill {
@@ -786,12 +748,30 @@ const buttonLink = getButtonHrefForPage(page.path);
   /* ==========================================================================
      5. TABELA DE PREÇOS (LIGHT)
      ========================================================================== */
+  .section-pricing {
+    text-align: center;
+  }
+
+  .section-pricing .section-head {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+  }
+
+  .section-pricing .section-head h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .pricing-table-wrap {
+    max-width: 960px;
+    margin: 0 auto;
     background: #ffffff;
     border: 1px solid var(--line);
     border-radius: var(--radius);
     overflow-x: auto;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
   }
 
   .pricing-table {
@@ -799,12 +779,20 @@ const buttonLink = getButtonHrefForPage(page.path);
     border-collapse: collapse;
     font-size: 0.98rem;
     text-align: left;
+    margin: 0 auto;
   }
 
   .pricing-table th,
   .pricing-table td {
     padding: 1rem 1.25rem;
     border-bottom: 1px solid var(--line);
+  }
+
+  .pricing-table th:nth-child(3),
+  .pricing-table td:nth-child(3),
+  .pricing-table th:nth-child(4),
+  .pricing-table td:nth-child(4) {
+    text-align: center;
   }
 
   .pricing-table th {
@@ -824,10 +812,11 @@ const buttonLink = getButtonHrefForPage(page.path);
   }
 
   .pricing-disclaimer {
+    max-width: 800px;
+    margin: 1.25rem auto 0 auto;
     font-size: 0.85rem;
     color: var(--muted);
     font-style: italic;
-    margin-top: 0.85rem;
     text-align: center;
   }
 
@@ -931,13 +920,51 @@ const buttonLink = getButtonHrefForPage(page.path);
   /* ==========================================================================
      7. GRADE DE VEÍCULOS (LIGHT)
      ========================================================================== */
+  .section-fleet {
+    text-align: center;
+  }
+
+  .section-fleet .section-head {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2.75rem auto;
+  }
+
+  .section-fleet .section-head h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-fleet .section-head h2::before {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-fleet .section-head .badge-pill {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-fleet .section-head .section-sub {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .fleet-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1.5rem;
+    max-width: 1240px;
+    margin: 0 auto;
   }
 
   .fleet-card {
+    flex: 0 1 250px;
+    width: 250px;
+    max-width: 100%;
     background: #ffffff;
     border: 1px solid var(--line);
     border-radius: var(--radius);

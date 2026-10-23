@@ -1,0 +1,29 @@
+---
+const whatsappDest = "https://wa.me/5511975413120?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20servi%C3%A7o%20de%20aluguel%20de%20van.%20Aluguel%20de%20van.";
+
+return Astro.redirect(whatsappDest, 302);
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content={`0;url=${whatsappDest}`} />
+    <title>Redirecionando para o WhatsApp | Aluguel de Van SP</title>
+    <link rel="canonical" href={whatsappDest} />
+    <meta name="robots" content="noindex, nofollow" />
+    <script is:inline define:vars={{ whatsappDest }}>
+      window.location.replace(whatsappDest);
+    </script>
+  </head>
+  <body style="font-family: system-ui, -apple-system, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background: #0f1a10; color: #ffffff; text-align: center; padding: 1.5rem;">
+    <div style="max-width: 480px; background: #142216; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2.5rem 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.4);">
+      <h1 style="font-size: 1.4rem; margin-bottom: 0.85rem; font-weight: 700;">Iniciando atendimento no WhatsApp...</h1>
+      <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 1.75rem; line-height: 1.5;">
+        Você está sendo redirecionado para a nossa equipe de atendimento oficial no WhatsApp.
+      </p>
+      <a href={whatsappDest} style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.95rem 1.75rem; background: #25d366; color: #ffffff; text-decoration: none; border-radius: 999px; font-weight: 700; font-size: 1rem; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);">
+        <span>Abrir WhatsApp agora</span>
+      </a>
+    </div>
+  </body>
+</html>

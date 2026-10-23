@@ -1,0 +1,288 @@
+---
+import Base from '../layouts/Base.astro';
+import FrotaComodidades from '../components/FrotaComodidades.astro';
+import GoogleReviewsSection from '../components/GoogleReviewsSection.astro';
+import MegaEventosSection from '../components/MegaEventosSection.astro';
+
+// Objeto de metadados da página de teste isolada
+const pageMock = {
+  title: 'Ambiente de Teste: Novos Blocos de Conversão e SEO | Aluguel de Van SP',
+  description: 'Ambiente de validação e aprovação dos novos componentes de SEO, Prova Social Google e Comodidades.',
+  path: '/teste-novos-blocos/',
+  robots: 'noindex, nofollow',
+  type: 'page'
+};
+
+const whatsappTestLink = 'https://alugueldevansp.com/aluguel-de-van-12-lugares-1';
+---
+
+<Base page={pageMock}>
+  <!-- Painel de Controle de Validação (Header de Teste) -->
+  <section class="test-admin-bar">
+    <div class="test-admin-container">
+      <div class="test-admin-badge">
+        <span class="live-dot"></span> PASSO 1: Ambiente de Validação CRO &amp; SEO
+      </div>
+      <h1 class="test-admin-title">Prévia dos 3 Novos Blocos de Conversão</h1>
+      <p class="test-admin-desc">
+        Revise abaixo o layout, a hierarquia semântica (H2/H3), os ícones SVGs inline e a prova social Google.
+        Ao aprovar, estes blocos serão integrados com segurança nas páginas de serviço.
+      </p>
+
+      <nav class="test-quick-nav">
+        <a href="#bloco-comodidades" class="test-nav-btn">1. Comodidades da Frota</a>
+        <a href="#bloco-google" class="test-nav-btn">2. Avaliações Google</a>
+        <a href="#bloco-megaeventos" class="test-nav-btn">3. Bloco de Megaeventos</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- BLOCO 1: COMODIDADES DA FROTA -->
+  <div id="bloco-comodidades" class="test-block-wrapper">
+    <div class="test-block-indicator">
+      <span class="test-indicator-tag">Bloco 1</span>
+      <strong>Destaque Visual de Comodidades da Frota (SVGs Inline)</strong>
+    </div>
+
+    <!-- Variação 1: Banner Completo de Destaque -->
+    <FrotaComodidades
+      variant="banner"
+      title="Itens de Série em Toda a Frota Executiva"
+      subtitle="Conforto, conectividade e entretenimento inclusos em todas as viagens sem custo adicional."
+    />
+
+    <!-- Demonstração da Variação Compacta (Chips) -->
+    <div class="test-compact-demo">
+      <div class="test-compact-container">
+        <span class="test-sub-label">Variação alternativa (Chips compactos para Hero ou formulários):</span>
+        <FrotaComodidades variant="compact" />
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCO 2: PROVA SOCIAL PADRÃO GOOGLE MEU NEGÓCIO -->
+  <div id="bloco-google" class="test-block-wrapper">
+    <div class="test-block-indicator">
+      <span class="test-indicator-tag">Bloco 2</span>
+      <strong>Prova Social Padrão Google Meu Negócio (Nota 4.9 &amp; 4 Depoimentos Reais)</strong>
+    </div>
+
+    <GoogleReviewsSection badgeTitle="Avaliações Verificadas" />
+  </div>
+
+  <!-- BLOCO 3: SEÇÃO DE MEGAEVENTOS E TURISMO -->
+  <div id="bloco-megaeventos" class="test-block-wrapper">
+    <div class="test-block-indicator">
+      <span class="test-indicator-tag">Bloco 3</span>
+      <strong>Bloco de Megaeventos e Excursões (Hierarquia Semântica H2 / H3 para SEO)</strong>
+    </div>
+
+    <MegaEventosSection
+      buttonHref={whatsappTestLink}
+      title="Vans Executivas para Megaeventos, Shows e Turismo em SP"
+      subtitle="Transporte privativo planejado para seu grupo curtir o festival ou evento sem aperto em transporte público nem filas abusivas de estacionamento."
+    />
+  </div>
+
+  <!-- Painel de Conclusão e Próximo Passo -->
+  <section class="test-finish-banner">
+    <div class="test-finish-container">
+      <h2>Pronto para aplicar em todas as páginas?</h2>
+      <p>
+        Se o visual, as cores e as chamadas persuasivas estiverem aprovadas, confirme no chat para avançarmos para o <strong>PASSO 2</strong> (integração global mantendo 100% dos textos originais).
+      </p>
+      <div class="test-finish-cta">
+        <span class="test-verified-badge">✓ Links de conversão configurados para: <code>{whatsappTestLink}</code></span>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .test-admin-bar {
+    background: linear-gradient(135deg, #09120a 0%, #172a1a 100%);
+    border-bottom: 2px solid #fcc044;
+    padding: 3.5rem 1.25rem 2.5rem 1.25rem;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .test-admin-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .test-admin-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(252, 192, 68, 0.15);
+    border: 1px solid #fcc044;
+    color: #fcc044;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    margin-bottom: 1.25rem;
+  }
+
+  .live-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #25d366;
+    box-shadow: 0 0 8px #25d366;
+    animation: pulseDot 1.5s infinite;
+  }
+
+  @keyframes pulseDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+  }
+
+  .test-admin-title {
+    font-size: clamp(1.85rem, 4vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
+  }
+
+  .test-admin-desc {
+    font-size: 1.0625rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin: 0 0 1.75rem 0;
+  }
+
+  .test-quick-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .test-nav-btn {
+    display: inline-block;
+    padding: 0.6rem 1.15rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #f1f5f9;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .test-nav-btn:hover {
+    background: #fcc044;
+    color: #0c1a0e;
+    border-color: #fcc044;
+  }
+
+  .test-block-wrapper {
+    position: relative;
+    border-bottom: 3px dashed #cbd5e1;
+  }
+
+  .test-block-indicator {
+    background: #1e293b;
+    color: #ffffff;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    font-size: 0.9375rem;
+    border-bottom: 1px solid #334155;
+  }
+
+  .test-indicator-tag {
+    background: #fcc044;
+    color: #0f172a;
+    font-weight: 800;
+    font-size: 0.75rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+
+  .test-compact-demo {
+    background: #f8fafc;
+    padding: 2rem 1.25rem;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .test-compact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .test-sub-label {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+
+  /* Painel de Conclusão */
+  .test-finish-banner {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 4rem 1.25rem;
+    text-align: center;
+  }
+
+  .test-finish-container {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .test-finish-banner h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 1rem 0;
+  }
+
+  .test-finish-banner p {
+    font-size: 1.0625rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .test-verified-badge {
+    display: inline-block;
+    background: rgba(37, 211, 102, 0.15);
+    border: 1px solid rgba(37, 211, 102, 0.4);
+    color: #25d366;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+  }
+
+  .test-verified-badge code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 0.8125rem;
+  }
+
+  @media (max-width: 640px) {
+    .test-quick-nav {
+      flex-direction: column;
+    }
+    .test-nav-btn {
+      width: 100%;
+    }
+  }
+</style>

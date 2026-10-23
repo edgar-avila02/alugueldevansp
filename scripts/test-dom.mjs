@@ -1,42 +1,25 @@
 import * as cheerio from 'cheerio';
 
-async function main() {
-  const url = 'https://alugueldevansp.com/aluguel-de-van/';
-  console.log('Fetching', url);
-  const res = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0' } });
+async function testUrl(path) {
+  const res = await fetch('http://localhost:4321' + path);
   const html = await res.text();
   const $ = cheerio.load(html);
-
-  console.log('--- main#main children ---');
-  $('main#main').children().each((_, el) => {
-    console.log(el.name, $(el).attr('class') || '', $(el).attr('id') || '');
+  const badButtons = [];
+  $('a.btn, a.btn-chamativo, a.header-cta, a.sticky-cta, a.service-hero-whatsapp-btn, a.btn-whatsapp-cta').each((_, el) => {
+    const href = $(el).attr('href');
+    if (href !== 'https://alugueldevansp.com/aluguel-de-van-12-lugares-1') {
+      badButtons.push(href);
+    }
   });
+  console.log(path, '-> Botões fora do padrão:', badButtons.length, badButtons);
+}
 
-  console.log('--- #content or .site-content children ---');
-  $('#content, .site-content').children().each((_, el) => {
-    console.log(el.name, $(el).attr('class') || '', $(el).attr('id') || '');
-  });
-
-  console.log('--- elements between main and footer ---');
-  $('footer').prevAll().slice(0, 8).each((_, el) => {
-    console.log(el.name, $(el).attr('class') || '', $(el).attr('id') || '');
-  });
-
-  console.log('--- Search for strings in full HTML ---');
-  for (const s of [
-    'clientes',
-    'dizendo',
-    'parceiros',
-    'EMTU',
-    'WhatsApp',
-    'precisa saber',
-    'Como fazer',
-    'benefícios',
-    'veículos disponíveis',
-    'Sprinter',
-  ]) {
-    console.log(`"${s}": ${html.includes(s)}`);
-  }
+async function main() {
+  await testUrl('/aluguel-de-van-12-lugares/guarulhos/aeroporto-de-guarulhos/');
+  await testUrl('/aluguel-de-van-12-lugares/guarulhos/centro/');
+  await testUrl('/aluguel-de-van-12-lugares/guarulhos/maia/');
+  await testUrl('/aluguel-de-van-12-lugares/guarulhos/vila-augusta/');
+  await testUrl('/aluguel-de-van-12-lugares-guarulhos/');
 }
 
 main().catch(console.error);

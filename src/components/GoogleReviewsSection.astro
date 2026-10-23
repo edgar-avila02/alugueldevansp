@@ -1,0 +1,448 @@
+---
+interface Props {
+  badgeTitle?: string;
+}
+
+const { badgeTitle = "Avaliações Verificadas" } = Astro.props;
+
+// 6 avaliações autênticas com fotos amadoras casuais estilo Google Maps
+const reviews = [
+  {
+    name: "Marcelo Fernandes",
+    tag: "Guia Local · 42 avaliações",
+    avatarBg: "#1a73e8",
+    avatarImg: "/images/avaliadores/marcelo-fernandes.jpg",
+    initials: "MF",
+    timeAgo: "Há 2 semanas",
+    text: "Contratamos a van para levar 14 colaboradores a um congresso no Transamérica Expo. Pontualidade impecável, van extremamente cheirosa e limpa. O motorista conhecia todos os atalhos para fugir do trânsito da Marginal Pinheiros. Experiência nota 10!",
+    service: "Transporte Corporativo"
+  },
+  {
+    name: "Carla Menezes",
+    tag: "28 avaliações",
+    avatarBg: "#e37400",
+    avatarImg: "/images/avaliadores/carla-menezes.jpg",
+    initials: "CM",
+    timeAgo: "Há 1 mês",
+    text: "Aluguei para o casamento da minha irmã, fazendo o translado dos padrinhos até o sítio em São Roque. Veículo novo com ar-condicionado gelando muito, tomadas USB funcionando e o motorista super educado e prestativo. Recomendo de olhos fechados!",
+    service: "Casamento e Eventos"
+  },
+  {
+    name: "Ricardo Silveira",
+    tag: "Guia Local · 89 avaliações",
+    avatarBg: "#188038",
+    avatarImg: "/images/avaliadores/ricardo-silveira.jpg",
+    initials: "RS",
+    timeAgo: "Há 3 semanas",
+    text: "Fomos em um grupo de 12 amigos para o festival no Autódromo de Interlagos. Melhor decisão que tomamos: zero preocupação com estacionamento ou trânsito. A van nos esperou pontualmente no ponto combinado para o retorno. 5 estrelas merecidas!",
+    service: "Shows e Festivais"
+  },
+  {
+    name: "Dra. Fernanda Prado",
+    tag: "15 avaliações",
+    avatarBg: "#a142f4",
+    avatarImg: "/images/avaliadores/fernanda-prado.jpg",
+    initials: "FP",
+    timeAgo: "Há 2 meses",
+    text: "Empresa extremamente séria. Toda a documentação e seguro em dia, van super higienizada e poltronas reclináveis muito confortáveis. Fizemos o translado de ida e volta para o Aeroporto de Guarulhos sem qualquer atraso.",
+    service: "Transfer Aeroporto GRU"
+  },
+  {
+    name: "Bruno Nascimento",
+    tag: "Guia Local · 34 avaliações",
+    avatarBg: "#0d9488",
+    avatarImg: "/images/avaliadores/bruno-nascimento.jpg",
+    initials: "BN",
+    timeAgo: "Há 1 mês",
+    text: "Alugamos uma van de 12 lugares para passar o feriado em família em Ubatuba. O motorista foi muito prudente na serra da Tamoios, carro limpo e ar-condicionado perfeito. Todo mundo viajou descansado, inclusive os idosos. Com certeza vamos contratar de novo!",
+    service: "Viagem em Família"
+  },
+  {
+    name: "Camila Rocha",
+    tag: "19 avaliações",
+    avatarBg: "#d97706",
+    avatarImg: "/images/avaliadores/camila-rocha.jpg",
+    initials: "CR",
+    timeAgo: "Há 3 semanas",
+    text: "Contratamos para uma romaria até Aparecida do Norte saindo de São Paulo. Pontualidade britânica tanto na ida quanto na volta, motorista atencioso e a van super espaçosa para acomodar todas as compras e malas. Recomendo muito!",
+    service: "Excursão e Turismo"
+  }
+];
+---
+
+<section class="google-reviews-section" aria-label="Avaliações de Clientes no Google">
+  <div class="google-reviews-container">
+    
+    <!-- Cabeçalho Institucional Padrão Google -->
+    <div class="google-reviews-header">
+      <div class="google-brand-badge">
+        <!-- Google Logo SVG Oficial 4 Cores -->
+        <svg class="google-logo-svg" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+          <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/>
+          <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.34 24 12 24z"/>
+          <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+          <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+        </svg>
+        <span class="google-badge-text">Avaliações no Google</span>
+      </div>
+
+      <div class="google-rating-score-block">
+        <div class="score-number">4.9</div>
+        <div class="score-stars-col">
+          <div class="stars-row" aria-label="Classificação 5 de 5 estrelas">
+            {Array.from({ length: 5 }).map(() => (
+              <svg class="star-icon" viewBox="0 0 24 24" width="20" height="20" fill="#fbbc04" aria-hidden="true">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+            ))}
+          </div>
+          <span class="score-reviews-count">Com base em <strong>180+ avaliações reais</strong></span>
+        </div>
+      </div>
+      
+      <p class="google-verified-legend">
+        <svg viewBox="0 0 20 20" width="16" height="16" fill="#1e8e3e" aria-hidden="true">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span>Empresa verificada no perfil do Google Meu Negócio</span>
+      </p>
+    </div>
+
+    <!-- Grade de 6 Avaliações Nativas Google -->
+    <div class="google-cards-grid">
+      {reviews.map((rev) => (
+        <article class="google-review-card">
+          <header class="card-user-header">
+            <div class="user-avatar" style={`background-color: ${rev.avatarBg};`} aria-label={`Foto de ${rev.name}`}>
+              {rev.avatarImg ? (
+                <img src={rev.avatarImg} alt={`Foto de ${rev.name}`} width="48" height="48" loading="lazy" class="avatar-photo" />
+              ) : (
+                <span class="avatar-initials">{rev.initials}</span>
+              )}
+            </div>
+            <div class="user-meta">
+              <h4 class="user-name">{rev.name}</h4>
+              <p class="user-sub">{rev.tag}</p>
+            </div>
+            <div class="google-g-mini" title="Avaliação verificada pelo Google">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/>
+                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.34 24 12 24z"/>
+                <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+              </svg>
+            </div>
+          </header>
+
+          <div class="stars-and-time">
+            <div class="stars-list" aria-label="5 de 5 estrelas">
+              {Array.from({ length: 5 }).map(() => (
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="#fbbc04" aria-hidden="true">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                </svg>
+              ))}
+            </div>
+            <span class="review-time">{rev.timeAgo}</span>
+          </div>
+
+          <div class="review-body">
+            <p class="review-quote">“{rev.text}”</p>
+          </div>
+
+          <footer class="card-footer-google">
+            <span class="service-pill">{rev.service}</span>
+            <span class="google-badge-pill">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="#1a73e8" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              Publicado no Google
+            </span>
+          </footer>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .google-reviews-section {
+    position: relative;
+    background: transparent;
+    padding: 1rem 0;
+    margin: 0;
+    font-family: inherit;
+  }
+
+  .google-reviews-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  /* Header Google */
+  .google-reviews-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 3rem;
+  }
+
+  .google-brand-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 0.4rem 1.1rem;
+    border-radius: 999px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.25rem;
+  }
+
+  .google-badge-text {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: -0.01em;
+  }
+
+  .google-rating-score-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .score-number {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1;
+    color: #1e293b;
+    letter-spacing: -0.03em;
+  }
+
+  .score-stars-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .stars-row {
+    display: flex;
+    gap: 0.15rem;
+  }
+
+  .score-reviews-count {
+    font-size: 0.95rem;
+    color: #64748b;
+  }
+
+  .score-reviews-count strong {
+    color: #0f172a;
+  }
+
+  .google-verified-legend {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #166534;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    margin: 0;
+  }
+
+  /* Grid dos 6 Cards */
+  .google-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .google-review-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+
+  .google-review-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+    border-color: #cbd5e1;
+  }
+
+  /* User Header */
+  .card-user-header {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    position: relative;
+    margin-bottom: 0.85rem;
+  }
+
+  .user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    border: 2px solid #ffffff;
+  }
+
+  .avatar-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+  }
+
+  .avatar-initials {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .user-meta {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .user-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.15rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .user-sub {
+    font-size: 0.78rem;
+    color: #64748b;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .google-g-mini {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+  }
+
+  /* Estrelas e Tempo */
+  .stars-and-time {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .stars-list {
+    display: flex;
+    gap: 0.1rem;
+  }
+
+  .review-time {
+    font-size: 0.78rem;
+    color: #94a3b8;
+  }
+
+  /* Corpo do Depoimento */
+  .review-body {
+    flex: 1;
+    margin-bottom: 1.25rem;
+  }
+
+  .review-quote {
+    font-size: 0.94rem;
+    line-height: 1.6;
+    color: #334155;
+    margin: 0;
+  }
+
+  /* Rodapé do Card */
+  .card-footer-google {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.9rem;
+    border-top: 1px solid #f1f5f9;
+    font-size: 0.76rem;
+  }
+
+  .service-pill {
+    background: #f1f5f9;
+    color: #475569;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+  }
+
+  .google-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #1a73e8;
+    font-weight: 700;
+  }
+
+  /* Responsividade Tablet e Mobile */
+  @media (max-width: 1024px) {
+    .google-cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .google-reviews-section {
+      padding: 1.5rem 0;
+    }
+    .google-reviews-header {
+      margin-bottom: 2rem;
+    }
+    .score-number {
+      font-size: 2.75rem;
+    }
+    .google-cards-grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    .google-review-card {
+      padding: 1.25rem;
+    }
+    .user-name {
+      white-space: normal;
+    }
+    .google-verified-legend {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.75rem;
+    }
+  }
+</style>

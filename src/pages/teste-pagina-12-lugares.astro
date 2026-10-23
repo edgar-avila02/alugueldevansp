@@ -1,0 +1,1177 @@
+---
+import Base from '../layouts/Base.astro';
+import FrotaComodidades from '../components/FrotaComodidades.astro';
+import GoogleReviewsSection from '../components/GoogleReviewsSection.astro';
+import MegaEventosSection from '../components/MegaEventosSection.astro';
+import { injectForm } from '../lib/pages.js';
+import samplePage from '../data/pages/aluguel-de-van-12-lugares-alto-de-pinheiros.json';
+import * as cheerio from 'cheerio';
+
+// Metadados da página de teste
+const page = {
+  ...samplePage,
+  path: '/teste-pagina-12-lugares/',
+  title: 'Aluguel de van com 12 lugares em Alto de Pinheiros (Versão Coesa e Harmonizada)',
+  robots: 'noindex, nofollow'
+};
+
+const whatsappTestLink = 'https://alugueldevansp.com/aluguel-de-van-12-lugares-1';
+
+// Processa o HTML e segmenta as seções para organização coesa e alternância rigorosa Claro/Escuro
+const rawProcessedHtml = injectForm(samplePage.html, samplePage.path);
+const $ = cheerio.load(rawProcessedHtml, { xmlMode: false, decodeEntities: false });
+
+// 1. Topo: Hero Card + Razões de Escolha isolados cirurgicamente (ESCURO)
+const heroCardHtml = $.html($('.service-hero-compare-section').first());
+const reasonsHtml = $.html($('.section-service-reasons').first());
+const topHtml = heroCardHtml + reasonsHtml;
+
+// 2. Formulário de Lead com Contatos isolado cirurgicamente (ESCURO)
+const leadHtml = $.html($('.section-service-lead').first());
+---
+
+<Base page={page}>
+  <!-- Topo da Página -->
+  <header class="page-hero">
+    <div class="page-hero-inner">
+      <h1>{samplePage.h1 || samplePage.title}</h1>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       SEÇÃO 1: TOPO ORIGINAL (INTACTO - CONFORME IMAGEM ENVIADA)
+       Card Flutuante da Van + 3 Benefícios + Razões Pelas Quais Escolhem
+       FUNDO: ESCURO ⚫
+       ========================================================================= -->
+  <div class="service-hero-top-wrapper is-service-page">
+    <Fragment set:html={topHtml} />
+  </div>
+
+  <!-- =========================================================================
+       SEÇÃO 2: COMODIDADES DA FROTA DE 12 LUGARES
+       Ar-condicionado, Wi-Fi 4G/5G, TV Digital, Tomadas USB e Bluetooth
+       FUNDO: CLARO ⚪
+       ========================================================================= -->
+  <FrotaComodidades
+    variant="banner"
+    theme="light"
+    title="Conforto de Primeira Linha em Nossas Vans de 12 Lugares"
+    subtitle="Itens de série revisados para garantir a melhor experiência para sua família ou equipe"
+  />
+
+  <!-- =========================================================================
+       SEÇÃO 3: MEGAEVENTOS E TURISMO EM SP (POSICIONADO NO TOPO)
+       Lollapalooza, Fórmula 1, Rock in Rio, The Town, Turismo Religioso, Hopi Hari
+       FUNDO: ESCURO ⚫
+       ========================================================================= -->
+  <MegaEventosSection
+    buttonHref={whatsappTestLink}
+    title="Aluguel de Van 12 Lugares para Shows, Festivais e Excursões em SP"
+    subtitle="Reserve seu transporte para os principais eventos do ano com ida e volta garantidas, sem preocupação com trânsito ou estacionamento."
+  />
+
+  <!-- =========================================================================
+       SEÇÃO 4: PROVA SOCIAL PADRÃO GOOGLE REVIEWS + ÓRGÃOS HOMOLOGADOS
+       Nota 4.9, 6 fotos amadoras autênticas (Carla, Marcelo, Bruno, Camila, etc.)
+       + Selos oficiais de homologação: EMTU, SPTrans, ANTT e Artesp
+       FUNDO: CLARO ⚪
+       ========================================================================= -->
+  <section class="section-light section-social-trust">
+    <div class="social-trust-inner">
+      <GoogleReviewsSection badgeTitle="Avaliações Verificadas no Google" />
+      
+      <!-- Órgãos Reguladores e Homologações Oficiais -->
+      <div class="partners-block-wrap">
+        <div class="partners-block text-center">
+          <h3 class="partners-title">Veículos 100% regulamentados e homologados</h3>
+          <p class="partners-sub">Autorizados pelos principais órgãos de fiscalização de transporte público e rodoviário:</p>
+          <div class="partners-logos-row">
+            <div class="partner-logo-box">
+              <img src="/wp-content/uploads/2025/07/Logo-EMTU.webp" alt="Logo EMTU" width="180" height="90" loading="lazy" />
+            </div>
+            <div class="partner-logo-box">
+              <img src="/wp-content/uploads/2025/07/Logo-SPTrans.webp" alt="Logo SPTrans" width="180" height="86" loading="lazy" />
+            </div>
+            <div class="partner-logo-box">
+              <img src="/wp-content/uploads/2026/03/Logo-da-ANTT.webp" alt="Logo ANTT" width="180" height="94" loading="lazy" />
+            </div>
+            <div class="partner-logo-box">
+              <img src="/wp-content/uploads/2026/03/Logo-da-Artesp.webp" alt="Logo Artesp" width="180" height="94" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 5: O QUE VOCÊ PRECISA SABER? (DIFERENCIAIS ESSENCIAIS)
+       6 Diferenciais: Preço Justo, Roteiro, Reserva, Motoristas, Frota, Pontualidade
+       FUNDO: ESCURO ⚫
+       ========================================================================= -->
+  <section class="section-dark section-know">
+    <div class="section-dark-inner">
+      <div class="section-head-dark text-center">
+        <span class="kicker-gold">Informações Importantes</span>
+        <h2>O que você precisa saber?</h2>
+        <p class="section-sub-dark">Informações essenciais para planejar sua locação com total transparência e tranquilidade:</p>
+      </div>
+
+      <div class="know-grid">
+        <div class="know-card">
+          <div class="know-icon">💰</div>
+          <h3>Preço justo e sem surpresas</h3>
+          <p>Valores informados com antecedência, contemplando motorista, combustível e seguro dos passageiros.</p>
+        </div>
+
+        <div class="know-card">
+          <div class="know-icon">🗺️</div>
+          <h3>Roteiro personalizado</h3>
+          <p>Você decide onde e quando quer parar. Total flexibilidade de horário e itinerário para o seu grupo.</p>
+        </div>
+
+        <div class="know-card">
+          <div class="know-icon">⚡</div>
+          <h3>Reserva facilitada</h3>
+          <p>Envio imediato da proposta com contrato digital. Confirmação rápida e sem complicações.</p>
+        </div>
+
+        <div class="know-card">
+          <div class="know-icon">👨‍✈️</div>
+          <h3>Motoristas experientes</h3>
+          <p>Profissionais qualificados, credenciados e experientes em viagens urbanas, serranas e interestaduais.</p>
+        </div>
+
+        <div class="know-card">
+          <div class="know-icon">🚐</div>
+          <h3>Frota nova e revisada</h3>
+          <p>Veículos equipados com ar-condicionado de alta capacidade, poltronas reclináveis e rigorosa higienização.</p>
+        </div>
+
+        <div class="know-card">
+          <div class="know-icon">⏱️</div>
+          <h3>Pontualidade rigorosa</h3>
+          <p>Chegamos com antecedência ao ponto de embarque para garantir que sua programação ocorra perfeitamente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 6: ORIENTAÇÕES ÚTEIS E VANTAGENS EXCLUSIVAS
+       Dicas para Alugar a Van (Planeje, Bagagens, Antecedência) + 3 Benefícios com Fotos
+       FUNDO: CLARO ⚪
+       ========================================================================= -->
+  <section class="section-light section-tips-benefits">
+    <div class="tips-benefits-inner">
+      <!-- Bloco de Dicas -->
+      <div class="section-head text-center">
+        <span class="badge-pill">Orientações Úteis</span>
+        <h2>As melhores dicas para alugar uma van de 12 lugares</h2>
+        <p class="section-sub">Aqui estão algumas sugestões valiosas para quem está considerando alugar uma van 12 lugares em Alto de Pinheiros:</p>
+      </div>
+
+      <div class="service-tips-grid">
+        <div class="service-tip-card">
+          <div class="tip-card-header">
+            <span class="tip-check">✓</span>
+            <h3 class="tip-card-title">Planeje o roteiro e informe a locadora</h3>
+          </div>
+          <p>Se for uma viagem longa ou com paradas específicas, avise a empresa. Isso ajuda na escolha do modelo e evita cobranças extras.</p>
+        </div>
+
+        <div class="service-tip-card">
+          <div class="tip-card-header">
+            <span class="tip-check">✓</span>
+            <h3 class="tip-card-title">Avalie o espaço para bagagens</h3>
+          </div>
+          <p>Se o grupo levar muitas malas, verifique se há compartimento extra ou possibilidade de rebatimento de bancos.</p>
+        </div>
+
+        <div class="service-tip-card">
+          <div class="tip-card-header">
+            <span class="tip-check">✓</span>
+            <h3 class="tip-card-title">Reserve com antecedência</h3>
+          </div>
+          <p>Principalmente em feriados ou alta temporada, vans são muito procuradas. Reservar cedo garante disponibilidade e melhores preços.</p>
+        </div>
+      </div>
+
+      <!-- Bloco de Benefícios da Frota com Fotos -->
+      <div class="section-benefits-divider">
+        <div class="section-head text-center">
+          <span class="badge-pill">Vantagens Exclusivas</span>
+          <h2>Temos os melhores benefícios</h2>
+          <p class="section-sub">Viajar de van combina economia, praticidade e conforto inigualável para o seu grupo.</p>
+        </div>
+
+        <div class="benefits-gallery">
+          <div class="benefit-photo-card">
+            <img src="/wp-content/uploads/2025/07/Pessoas-felizes-dentro-da-van-1024x683.webp" alt="Espaço interno e poltronas reclináveis" loading="lazy" />
+            <div class="benefit-caption">
+              <h3>Espaço e conforto premium</h3>
+              <p>Poltronas reclináveis individuais, ar-condicionado duplo e som ambiente.</p>
+            </div>
+          </div>
+          <div class="benefit-photo-card">
+            <img src="/wp-content/uploads/2025/07/Jovens-ao-redor-de-uma-van-1024x683.webp" alt="Viagens e passeios em grupo" loading="lazy" />
+            <div class="benefit-caption">
+              <h3>União e diversão no trajeto</h3>
+              <p>Todos viajam juntos sem cansaço de dirigir ou custos de pedágio em vários carros.</p>
+            </div>
+          </div>
+          <div class="benefit-photo-card">
+            <img src="/wp-content/uploads/2025/07/Van-Renault-Master-preta.webp" alt="Vans executivas" loading="lazy" />
+            <div class="benefit-caption">
+              <h3>Padrão executivo</h3>
+              <p>Veículos discretos, elegantes e higienizados para empresas e eventos especiais.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 7: COMO ALUGAR SUA VAN EM 3 PASSOS SEM BUROCRACIA (CENTRALIZADO)
+       1. Envie seu roteiro / 2. Receba a proposta / 3. Embarque e curta
+       FUNDO: ESCURO ⚫
+       ========================================================================= -->
+  <section class="section-dark section-booking">
+    <div class="steps-dark">
+      <div class="steps-dark-head text-center">
+        <span class="kicker-gold">Processo Simples</span>
+        <h2>Como alugar sua van em 3 passos sem burocracia</h2>
+      </div>
+
+      <div class="steps-dark-grid">
+        <div class="step-dark-card">
+          <div class="step-circle">1</div>
+          <h3>Envie seu roteiro</h3>
+          <p>Informe pelo WhatsApp ou formulário: data, destino, horário e quantidade de passageiros.</p>
+        </div>
+        <div class="step-dark-card">
+          <div class="step-circle">2</div>
+          <h3>Receba a proposta</h3>
+          <p>Enviamos em minutos o orçamento detalhado com o modelo de van ideal e todos os itens inclusos.</p>
+        </div>
+        <div class="step-dark-card">
+          <div class="step-circle">3</div>
+          <h3>Embarque e curta</h3>
+          <p>A van chega pontualmente no endereço combinado. É só entrar, relaxar e aproveitar cada quilômetro!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 8: QUANTO CUSTA O ALUGUEL DA VAN? (TABELA DE PREÇOS CENTRALIZADA)
+       Origem, Destino, Capacidade e Valores Médios Estimados
+       FUNDO: CLARO ⚪
+       ========================================================================= -->
+  <section class="section-light section-pricing">
+    <div class="pricing-inner">
+      <div class="section-head text-center">
+        <span class="badge-pill">Transparência de Valores</span>
+        <h2>Quanto custa o aluguel da van?</h2>
+        <p class="section-sub">Confira valores médios referenciais para os trajetos e destinos mais procurados:</p>
+      </div>
+
+      <div class="pricing-table-wrap">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Origem</th>
+              <th>Destino</th>
+              <th>Capacidade</th>
+              <th>Preço médio estimado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>São Paulo</strong></td>
+              <td>Santos / Baixada Santista</td>
+              <td>15 a 18 lugares</td>
+              <td><span class="price-tag">A partir de R$ 680</span></td>
+            </tr>
+            <tr>
+              <td><strong>São Paulo</strong></td>
+              <td>Campinas e Região</td>
+              <td>15 a 18 lugares</td>
+              <td><span class="price-tag">A partir de R$ 780</span></td>
+            </tr>
+            <tr>
+              <td><strong>São Paulo</strong></td>
+              <td>Campos do Jordão / Serra</td>
+              <td>15 a 18 lugares</td>
+              <td><span class="price-tag">A partir de R$ 1.150</span></td>
+            </tr>
+            <tr>
+              <td><strong>São Paulo</strong></td>
+              <td>Aeroporto de Guarulhos (GRU)</td>
+              <td>Minivan / Van</td>
+              <td><span class="price-tag">A partir de R$ 420</span></td>
+            </tr>
+            <tr>
+              <td><strong>São Paulo</strong></td>
+              <td>Ubatuba / Litoral Norte</td>
+              <td>15 a 18 lugares</td>
+              <td><span class="price-tag">A partir de R$ 1.350</span></td>
+            </tr>
+            <tr>
+              <td><strong>São Paulo</strong></td>
+              <td>Aparecida do Norte</td>
+              <td>15 a 18 lugares</td>
+              <td><span class="price-tag">A partir de R$ 1.100</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="pricing-disclaimer">
+        *Valores referenciais com base no histórico de locação. O preço final pode variar conforme quilometragem, tempo de espera, pedágios e data da viagem. Entre em contato para uma cotação exata.
+      </p>
+
+      <div class="pricing-cta-wrap text-center">
+        <a href={whatsappTestLink} target="_blank" rel="noopener noreferrer" class="btn btn-chamativo pricing-btn">
+          <span>Solicitar orçamento sob medida</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEÇÃO 9: PEÇA SEU ORÇAMENTO GRATUITAMENTE (FORMULÁRIO DE LEAD)
+       Dados de Contato + Formulário Lead (Afastado da margem esquerda)
+       FUNDO: ESCURO ⚫
+       ========================================================================= -->
+  <Fragment set:html={leadHtml} />
+
+  <!-- =========================================================================
+       SEÇÃO 10: CONFIRA OS VEÍCULOS DISPONÍVEIS (PARTE FINAL FIXA)
+       9 Modelos com links para outros serviços - Perfeitamente Centralizado
+       FUNDO: CLARO ⚪
+       ========================================================================= -->
+  <section class="section-light section-fleet">
+    <div class="fleet-inner">
+      <div class="section-head text-center">
+        <span class="badge-pill">Nossa Frota</span>
+        <h2>Confira os veículos disponíveis para sua viagem</h2>
+        <p class="section-sub">Selecione o modelo perfeito para as necessidades do seu grupo:</p>
+      </div>
+
+      <div class="fleet-grid">
+        <div class="fleet-card">
+          <a href="/aluguel-de-van-12-lugares/" class="fleet-thumb" aria-label="Van 12 lugares">
+            <img src="/wp-content/uploads/2025/07/Van-de-12-lugares-branca.webp" alt="Aluguel de van 12 lugares" loading="lazy" />
+          </a>
+          <h3 class="fleet-title">
+            <a href="/aluguel-de-van-12-lugares/">Van 12 lugares</a>
+          </h3>
+          <p class="fleet-desc">Perfeita para grupos médios, passeios em família e transfers com total agilidade e conforto.</p>
+        </div>
+
+        <div class="fleet-card">
+          <a href="/aluguel-de-van-15-lugares/" class="fleet-thumb" aria-label="Van 15 lugares">
+            <img src="/wp-content/uploads/2025/07/Van-Renault-Master-15-lugares.webp" alt="Aluguel de van 15 lugares" loading="lazy" />
+          </a>
+          <h3 class="fleet-title">
+            <a href="/aluguel-de-van-15-lugares/">Van 15 lugares</a>
+          </h3>
+          <p class="fleet-desc">Espaço amplo com poltronas reclináveis para excursões, eventos e viagens com amigos.</p>
+        </div>
+
+        <div class="fleet-card">
+          <a href="/aluguel-de-van-18-lugares/" class="fleet-thumb" aria-label="Van 18 lugares">
+            <img src="/wp-content/uploads/2025/06/Van-Mercedes-Benz-Sprinter.webp" alt="Aluguel de van 18 lugares" loading="lazy" />
+          </a>
+          <h3 class="fleet-title">
+            <a href="/aluguel-de-van-18-lugares/">Van 18 lugares</a>
+          </h3>
+          <p class="fleet-desc">Capacidade máxima para grandes grupos, convenções corporativas e turismo interestadual.</p>
+        </div>
+
+        <div class="fleet-card">
+          <a href="/aluguel-de-van-com-motorista/" class="fleet-thumb" aria-label="Van com motorista">
+            <img src="/wp-content/uploads/2025/07/Van-Sprinter-prata.webp" alt="Van com motorista" loading="lazy" />
+          </a>
+          <h3 class="fleet-title">
+            <a href="/aluguel-de-van-com-motorista/">Van com motorista</a>
+          </h3>
+          <p class="fleet-desc">Motoristas profissionais e credenciados para você viajar com segurança e tranquilidade.</p>
+        </div>
+
+        <div class="fleet-card">
+          <a href="/aluguel-de-van-para-viagem/" class="fleet-thumb" aria-label="Van para viagem">
+            <img src="/wp-content/uploads/2025/07/Van-Mercedes-Benz-branca.webp" alt="Van para viagem" loading="lazy" />
+          </a>
+          <h3 class="fleet-title">
+            <a href="/aluguel-de-van-para-viagem/">Van para viagem</a>
+          </h3>
+          <p class="fleet-desc">Veículos revisados e climatizados para trajetos rodoviários, praia e interior.</p>
+        </div>
+
+        <div class="fleet-card">
+          <a href="/aluguel-de-van-para-passeio/" class="fleet-thumb" aria-label="Van para passeio">
+            <img src="/wp-content/uploads/2025/07/Van-Grand-Starex.webp" alt="Van para passeio" loading="lazy" />
+          </a>
+          <h3 class="fleet-title">
+            <a href="/aluguel-de-van-para-passeio/">Van para passeio</a>
+          </h3>
+          <p class="fleet-desc">Transporte sob medida para passeios urbanos, finais de semana e comemorações.</p>
+        </div>
+
+        <div class="fleet-card">
+          <a href="/aluguel-de-mini-van/" class="fleet-thumb" aria-label="Minivan executiva">
+            <img src="/wp-content/uploads/2025/07/Mercedes-Benz-Minivan-prata.webp" alt="Minivan executiva" loading="lazy" />
+          </a>
+          <h3 class="fleet-title">
+            <a href="/aluguel-de-mini-van/">Minivan executiva</a>
+          </h3>
+          <p class="fleet-desc">Padrão executivo e discrição para traslados de aeroportos e reuniões corporativas.</p>
+        </div>
+
+        <div class="fleet-card">
+          <a href="/aluguel-de-mini-van-7-lugares/" class="fleet-thumb" aria-label="Minivan 7 lugares">
+            <img src="/wp-content/uploads/2025/07/Spin-Chevrolet-Minivan-1024x576.webp" alt="Minivan 7 lugares" loading="lazy" />
+          </a>
+          <h3 class="fleet-title">
+            <a href="/aluguel-de-mini-van-7-lugares/">Minivan 7 lugares</a>
+          </h3>
+          <p class="fleet-desc">Ideal para famílias pequenas que buscam economia e comodidade no deslocamento.</p>
+        </div>
+
+        <div class="fleet-card">
+          <a href="/aluguel-de-van-furgao/" class="fleet-thumb" aria-label="Van de carga / furgão">
+            <img src="/wp-content/uploads/2025/07/Master-furgao.webp" alt="Van de carga / furgão" loading="lazy" />
+          </a>
+          <h3 class="fleet-title">
+            <a href="/aluguel-de-van-furgao/">Van de carga / furgão</a>
+          </h3>
+          <p class="fleet-desc">Espaço seguro e versátil para transporte de cargas, equipamentos e eventos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style is:global>
+  .hero-sub-local {
+    font-size: 1.125rem !important;
+    color: #cbd5e1 !important;
+    margin-top: 0.5rem !important;
+    font-weight: 500 !important;
+  }
+
+  /* Reset em tags de cabeçalho globais */
+  h2::before,
+  h3::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* =========================================================================
+     PADRÃO DE SEÇÕES ALTERNADAS (CLARO ⚪ E ESCURO ⚫)
+     ========================================================================= */
+  .section-light {
+    background: #ffffff !important;
+    box-shadow: 0 0 0 100vmax #ffffff !important;
+    clip-path: inset(0 -100vmax) !important;
+    padding: 5rem 0 !important;
+    color: #0f172a !important;
+    position: relative !important;
+  }
+
+  .section-dark {
+    background: #0f1a10 !important;
+    box-shadow: 0 0 0 100vmax #0f1a10 !important;
+    clip-path: inset(0 -100vmax) !important;
+    padding: 5rem 0 !important;
+    color: #ffffff !important;
+    position: relative !important;
+  }
+
+  .section-head {
+    text-align: center !important;
+    max-width: 820px !important;
+    margin: 0 auto 2.75rem !important;
+  }
+
+  .section-head h2 {
+    font-family: var(--font-head) !important;
+    font-size: clamp(1.8rem, 2.5vw + 0.5rem, 2.4rem) !important;
+    color: var(--ink, #0f172a) !important;
+    margin-bottom: 0.5rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+  }
+
+  .section-sub {
+    font-size: 1.05rem !important;
+    color: var(--muted, #64748b) !important;
+    max-width: 700px !important;
+    margin: 0 auto !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+  }
+
+  .badge-pill {
+    display: inline-block !important;
+    padding: 0.35rem 1rem !important;
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    color: var(--brand-700, #1b5e20) !important;
+    background: rgba(91, 154, 66, 0.12) !important;
+    border-radius: 999px !important;
+    margin-bottom: 0.75rem !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  .section-head-dark {
+    text-align: center !important;
+    max-width: 800px !important;
+    margin: 0 auto 3rem !important;
+  }
+
+  .section-head-dark h2 {
+    font-family: var(--font-head) !important;
+    font-size: clamp(1.9rem, 3vw, 2.5rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    color: #ffffff !important;
+    margin: 0 0 0.6rem !important;
+    text-align: center !important;
+  }
+
+  .section-sub-dark {
+    font-size: 1.05rem !important;
+    color: #9ca3af !important;
+    max-width: 700px !important;
+    margin: 0 auto !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+  }
+
+  .kicker-gold {
+    display: inline-block !important;
+    color: #fcc044 !important;
+    background: rgba(211, 144, 19, 0.15) !important;
+    border: 1px solid rgba(252, 192, 68, 0.3) !important;
+    font-size: 0.8rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    padding: 0.25rem 0.85rem !important;
+    border-radius: 999px !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  /* Containers internos padronizados */
+  .section-dark-inner,
+  .tips-benefits-inner,
+  .pricing-inner,
+  .fleet-inner,
+  .social-trust-inner {
+    max-width: 1140px !important;
+    margin: 0 auto !important;
+    padding: 0 1.5rem !important;
+  }
+
+  /* =========================================================================
+     SEÇÃO 4: ÓRGÃOS REGULADORES E LOGOS
+     ========================================================================= */
+  .section-social-trust {
+    padding: 4.5rem 0 4rem !important;
+  }
+
+  .partners-block-wrap {
+    max-width: 1100px !important;
+    margin: 3.5rem auto 0 !important;
+    padding-top: 2.5rem !important;
+    border-top: 1px solid var(--line, #e2e8f0) !important;
+  }
+
+  .partners-title {
+    font-size: 1.3rem !important;
+    color: var(--ink, #0f172a) !important;
+    margin-bottom: 0.35rem !important;
+    font-family: var(--font-head) !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+  }
+
+  .partners-sub {
+    font-size: 0.95rem !important;
+    color: var(--muted, #64748b) !important;
+    margin: 0 0 1.75rem !important;
+    text-align: center !important;
+  }
+
+  .partners-logos-row {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 2.5rem !important;
+    flex-wrap: wrap !important;
+  }
+
+  .partner-logo-box {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0.6rem 1.25rem !important;
+    background: #ffffff !important;
+    border: 1px solid #f1f5f9 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+    transition: transform 0.2s, box-shadow 0.2s !important;
+  }
+
+  .partner-logo-box:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06) !important;
+  }
+
+  .partner-logo-box img {
+    height: 48px !important;
+    max-height: 48px !important;
+    width: auto !important;
+    max-width: 170px !important;
+    object-fit: contain !important;
+    filter: grayscale(15%) contrast(105%) !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  /* =========================================================================
+     SEÇÃO 5: O QUE VOCÊ PRECISA SABER?
+     ========================================================================= */
+  .know-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 1.5rem !important;
+    max-width: 1140px !important;
+    margin: 0 auto !important;
+  }
+
+  .know-card {
+    background: #142216 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 14px !important;
+    padding: 1.75rem !important;
+    transition: transform 0.25s, border-color 0.25s !important;
+    text-align: left !important;
+  }
+
+  .know-card:hover {
+    transform: translateY(-4px) !important;
+    border-color: #25d366 !important;
+  }
+
+  .know-icon {
+    font-size: 2rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .know-card h3 {
+    font-family: var(--font-head) !important;
+    font-size: 1.2rem !important;
+    margin: 0 0 0.5rem !important;
+    color: #ffffff !important;
+  }
+
+  .know-card p {
+    font-size: 0.95rem !important;
+    margin: 0 !important;
+    color: #cbd5e1 !important;
+    line-height: 1.6 !important;
+  }
+
+  /* =========================================================================
+     SEÇÃO 6: DICAS E BENEFÍCIOS INTEGRADOS
+     ========================================================================= */
+  .service-tips-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 1.5rem !important;
+    max-width: 1140px !important;
+    margin: 0 auto 3.5rem !important;
+  }
+
+  .service-tip-card {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    padding: 1.75rem !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+    text-align: left !important;
+  }
+
+  .tip-card-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .tip-check {
+    width: 28px !important;
+    height: 28px !important;
+    background: #25d366 !important;
+    color: #ffffff !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: 800 !important;
+    font-size: 0.9rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  .tip-card-title {
+    font-size: 1.15rem !important;
+    font-family: var(--font-head) !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    margin: 0 !important;
+  }
+
+  .service-tip-card p {
+    font-size: 0.95rem !important;
+    color: #475569 !important;
+    line-height: 1.55 !important;
+    margin: 0 !important;
+  }
+
+  .section-benefits-divider {
+    padding-top: 3rem !important;
+    border-top: 1px solid #e2e8f0 !important;
+  }
+
+  .benefits-gallery {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)) !important;
+    gap: 1.75rem !important;
+    max-width: 1140px !important;
+    margin: 0 auto !important;
+  }
+
+  .benefit-photo-card {
+    background: #ffffff !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .benefit-photo-card img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .benefit-caption {
+    padding: 1.5rem !important;
+    text-align: center !important;
+  }
+
+  .benefit-caption h3 {
+    font-family: var(--font-head) !important;
+    font-size: 1.2rem !important;
+    margin: 0 0 0.4rem !important;
+    color: var(--ink, #0f172a) !important;
+  }
+
+  .benefit-caption p {
+    margin: 0 !important;
+    font-size: 0.92rem !important;
+    color: var(--ink-soft, #475569) !important;
+    line-height: 1.5 !important;
+  }
+
+  /* =========================================================================
+     SEÇÃO 7: 3 PASSOS DE LOCAÇÃO (CENTRALIZADO)
+     ========================================================================= */
+  .steps-dark {
+    max-width: 1140px !important;
+    margin: 0 auto !important;
+    padding: 0 1.5rem !important;
+  }
+
+  .steps-dark-head {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 auto 3rem !important;
+  }
+
+  .steps-dark-head .kicker-gold {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: inline-block !important;
+    align-self: center !important;
+  }
+
+  .steps-dark-head h2 {
+    font-family: var(--font-head) !important;
+    font-size: clamp(1.9rem, 3vw, 2.5rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    color: #ffffff !important;
+    margin: 0 0 1rem !important;
+    text-align: center !important;
+  }
+
+  .steps-dark-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2.5rem !important;
+  }
+
+  .step-dark-card {
+    text-align: center !important;
+    padding: 1.5rem !important;
+  }
+
+  .step-circle {
+    width: 64px !important;
+    height: 64px !important;
+    background: linear-gradient(135deg, #1e3a15 0%, #2e5520 100%) !important;
+    border: 2px solid #25d366 !important;
+    color: #ffffff !important;
+    font: 900 1.5rem var(--font-head) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 1.5rem !important;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.25) !important;
+    transition: transform 0.25s, box-shadow 0.25s !important;
+  }
+
+  .step-dark-card:hover .step-circle {
+    transform: translateY(-4px) scale(1.05) !important;
+    box-shadow: 0 14px 32px rgba(37, 211, 102, 0.4) !important;
+  }
+
+  .step-dark-card h3 {
+    font-family: var(--font-head) !important;
+    color: #ffffff !important;
+    font-size: 1.25rem !important;
+    margin: 0 0 0.6rem !important;
+  }
+
+  .step-dark-card p {
+    color: #9ca3af !important;
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+  }
+
+  /* =========================================================================
+     SEÇÃO 8: TABELA DE PREÇOS CENTRALIZADA
+     ========================================================================= */
+  .section-pricing {
+    text-align: center !important;
+  }
+
+  .pricing-table-wrap {
+    max-width: 960px !important;
+    margin: 0 auto !important;
+    background: #ffffff !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 16px !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04) !important;
+  }
+
+  .pricing-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 0.98rem !important;
+    text-align: left !important;
+    margin: 0 auto !important;
+    min-width: 600px !important;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    padding: 1.15rem 1.35rem !important;
+    border-bottom: 1px solid var(--line, #e2e8f0) !important;
+  }
+
+  .pricing-table th:nth-child(3),
+  .pricing-table td:nth-child(3),
+  .pricing-table th:nth-child(4),
+  .pricing-table td:nth-child(4) {
+    text-align: center !important;
+  }
+
+  .pricing-table th {
+    background: var(--sand, #f8f6f0) !important;
+    color: var(--ink, #0f172a) !important;
+    font-family: var(--font-head) !important;
+    font-weight: 700 !important;
+  }
+
+  .price-tag {
+    display: inline-block !important;
+    background: rgba(91, 154, 66, 0.12) !important;
+    color: var(--brand-700, #1b5e20) !important;
+    font-weight: 700 !important;
+    padding: 0.35rem 0.85rem !important;
+    border-radius: 8px !important;
+  }
+
+  .pricing-disclaimer {
+    max-width: 800px !important;
+    margin: 1.25rem auto 1.75rem auto !important;
+    font-size: 0.85rem !important;
+    color: var(--muted, #64748b) !important;
+    font-style: italic !important;
+    text-align: center !important;
+  }
+
+  .pricing-cta-wrap {
+    margin-top: 1.5rem !important;
+  }
+
+  .pricing-btn {
+    padding: 0.9rem 2.25rem !important;
+    font-size: 1.05rem !important;
+  }
+
+  /* =========================================================================
+     SEÇÃO 9: FORMULÁRIO DE LEAD (AFASTADO DA BORDA ESQUERDA & CENTRALIZADO)
+     ========================================================================= */
+  .section-service-lead {
+    background: #0f1a10 !important;
+    box-shadow: 0 0 0 100vmax #0f1a10 !important;
+    clip-path: inset(0 -100vmax) !important;
+    padding: 5rem 0 !important;
+    color: #ffffff !important;
+    position: relative !important;
+  }
+
+  .section-service-lead .contact-lead-grid {
+    max-width: 1140px !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) !important;
+    gap: 3.5rem !important;
+    align-items: start !important;
+    box-sizing: border-box !important;
+  }
+
+  .section-service-lead .contact-info-col {
+    padding-right: 1.5rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .section-service-lead .contact-info-col h2 {
+    font-family: var(--font-head) !important;
+    font-size: clamp(1.8rem, 2.5vw + 0.5rem, 2.3rem) !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    margin: 0 0 0.85rem !important;
+  }
+
+  .section-service-lead .contact-info-col p {
+    color: #cbd5e1 !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .section-service-lead .contact-info-col h3 {
+    color: #fcc044 !important;
+    font-family: var(--font-head) !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    margin: 1.5rem 0 0.35rem !important;
+  }
+
+  .section-service-lead .contact-form-col {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 20px !important;
+    padding: 2.25rem !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
+    box-sizing: border-box !important;
+  }
+
+  .section-service-lead .contact-form-col h3 {
+    color: #ffffff !important;
+    font-family: var(--font-head) !important;
+    font-size: 1.35rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 1.25rem !important;
+  }
+
+  /* =========================================================================
+     SEÇÃO 10: FROTA COM 9 VEÍCULOS (CENTRALIZADO)
+     ========================================================================= */
+  .section-fleet {
+    text-align: center !important;
+  }
+
+  .fleet-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1.5rem !important;
+    max-width: 1240px !important;
+    margin: 0 auto !important;
+  }
+
+  .fleet-card {
+    flex: 0 1 250px !important;
+    width: 250px !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: var(--radius, 14px) !important;
+    overflow: hidden !important;
+    text-decoration: none !important;
+    text-align: center !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .fleet-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08) !important;
+    border-color: #2e7d32 !important;
+  }
+
+  .fleet-thumb {
+    background: #fdfdfd !important;
+    padding: 1.25rem 1rem 0.5rem !important;
+    aspect-ratio: 16 / 10 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .fleet-thumb img {
+    max-height: 160px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    transition: transform 0.3s !important;
+  }
+
+  .fleet-card:hover .fleet-thumb img {
+    transform: scale(1.06) !important;
+  }
+
+  .fleet-title {
+    font-size: 1.15rem !important;
+    margin: 0.75rem 1rem 0.35rem !important;
+    font-family: var(--font-head) !important;
+    font-weight: 700 !important;
+  }
+
+  .fleet-title a {
+    color: var(--brand-700, #1b5e20) !important;
+    text-decoration: none !important;
+    transition: color 0.2s !important;
+  }
+
+  .fleet-card:hover .fleet-title a,
+  .fleet-title a:hover {
+    color: #e37400 !important;
+  }
+
+  .fleet-desc {
+    font-size: 0.9rem !important;
+    color: var(--ink-soft, #475569) !important;
+    line-height: 1.5 !important;
+    margin: 0 1.25rem 1.4rem !important;
+  }
+
+  /* =========================================================================
+     RESPONSIVIDADE COMPLETA PARA TABLET E MOBILE
+     ========================================================================= */
+  @media (max-width: 992px) {
+    .section-service-lead .contact-lead-grid {
+      grid-template-columns: 1fr !important;
+      gap: 2.5rem !important;
+      padding: 0 1.5rem !important;
+    }
+    .section-service-lead .contact-info-col {
+      padding-right: 0 !important;
+      text-align: center !important;
+    }
+    .section-service-lead .contact-info-col .kicker-gold {
+      margin: 0 auto 0.85rem !important;
+      display: inline-block !important;
+    }
+    .steps-dark-grid {
+      grid-template-columns: 1fr !important;
+      gap: 1.75rem !important;
+    }
+    .pricing-table th,
+    .pricing-table td {
+      padding: 0.85rem 1rem !important;
+      font-size: 0.9rem !important;
+    }
+    .partners-logos-row {
+      gap: 1.5rem !important;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .section-light,
+    .section-dark,
+    .section-service-lead {
+      padding: 3.5rem 0 !important;
+    }
+    .section-dark-inner,
+    .tips-benefits-inner,
+    .pricing-inner,
+    .fleet-inner,
+    .social-trust-inner,
+    .steps-dark,
+    .section-service-lead .contact-lead-grid {
+      padding: 0 1rem !important;
+    }
+    .section-head h2,
+    .section-head-dark h2,
+    .steps-dark-head h2 {
+      font-size: 1.65rem !important;
+    }
+    .service-tips-grid,
+    .benefits-gallery,
+    .know-grid {
+      grid-template-columns: 1fr !important;
+      gap: 1.25rem !important;
+    }
+    .section-service-lead .contact-form-col {
+      padding: 1.5rem 1.15rem !important;
+    }
+    .partners-logos-row {
+      gap: 1rem !important;
+    }
+    .partner-logo-box {
+      padding: 0.4rem 0.8rem !important;
+    }
+    .partner-logo-box img {
+      max-height: 38px !important;
+      max-width: 130px !important;
+    }
+    .fleet-card {
+      flex: 0 1 100% !important;
+      max-width: 320px !important;
+    }
+  }
+</style>

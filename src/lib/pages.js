@@ -17,9 +17,13 @@ function resolvePagesDir() {
 
 let cache;
 
+export function clearPagesCache() {
+  cache = null;
+}
+
 /** Carrega todas as páginas extraídas do WordPress (JSON por URL). */
-export function loadPages() {
-  if (cache) return cache;
+export function loadPages(forceFresh = false) {
+  if (!forceFresh && cache && import.meta.env.PROD) return cache;
   const dir = resolvePagesDir();
   cache = fs
     .readdirSync(dir)
@@ -191,7 +195,9 @@ export function injectForm(html, pagePath = '') {
     const anchor = img.closest('a');
     let buttonHref = '';
     if (pagePath.includes('guarulhos')) {
-      buttonHref = 'https://alugueldevansp.com/aluguel-de-van-1';
+      buttonHref = pagePath.includes('12-lugares')
+        ? 'https://alugueldevansp.com/aluguel-de-van-12-lugares-1'
+        : 'https://alugueldevansp.com/aluguel-de-van-1';
     } else {
       buttonHref = (anchor.attr('href') || '').trim();
       if (buttonHref) {
@@ -218,15 +224,25 @@ export function injectForm(html, pagePath = '') {
   });
 
   // Normaliza quaisquer links que apontam para rotas -1 legadas no corpo do texto
-  $('a[href*="-1"]').each(function () {
+  $('a').each(function () {
     const a = $(this);
+    const rawHref = (a.attr('href') || '').trim();
+    if (!rawHref) return;
+
+    // Apenas links que realmente terminam em -1 ou -1/ (rotas de redirecionamento WhatsApp)
+    const isWhatsAppRedirect = /-1\/?$/.test(rawHref.replace(/[?#].*$/, ''));
+    if (!isWhatsAppRedirect) return;
+
     if (pagePath.includes('guarulhos')) {
-      a.attr('href', 'https://alugueldevansp.com/aluguel-de-van-1');
+      const targetUrl = pagePath.includes('12-lugares')
+        ? 'https://alugueldevansp.com/aluguel-de-van-12-lugares-1'
+        : 'https://alugueldevansp.com/aluguel-de-van-1';
+      a.attr('href', targetUrl);
       a.attr('target', '_blank');
       a.attr('rel', 'noopener noreferrer');
       return;
     }
-    let href = (a.attr('href') || '').trim().replace(/^https?:\/\/(?:www\.)?alugueldevansp\.com/i, '').replace(/\/$/, '');
+    let href = rawHref.replace(/^https?:\/\/(?:www\.)?alugueldevansp\.com/i, '').replace(/\/$/, '');
     if (WHATSAPP_REDIRECTS[href]) {
       a.attr('href', href + '/');
       a.attr('target', '_blank');
@@ -248,6 +264,11 @@ export function injectForm(html, pagePath = '') {
       el.text('Solicitar orçamento');
       el.addClass('btn-chamativo');
       if (!el.hasClass('btn')) el.addClass('btn');
+      if (pagePath.includes('guarulhos') && pagePath.includes('12-lugares')) {
+        el.attr('href', 'https://alugueldevansp.com/aluguel-de-van-12-lugares-1');
+        el.attr('target', '_blank');
+        el.attr('rel', 'noopener noreferrer');
+      }
     }
   });
 
@@ -292,7 +313,9 @@ export function injectForm(html, pagePath = '') {
       // Extrai o link de orçamento antes de remover o topo original
       let heroButtonHref = '';
       if (pagePath.includes('guarulhos')) {
-        heroButtonHref = 'https://alugueldevansp.com/aluguel-de-van-1';
+        heroButtonHref = pagePath.includes('12-lugares')
+          ? 'https://alugueldevansp.com/aluguel-de-van-12-lugares-1'
+          : 'https://alugueldevansp.com/aluguel-de-van-1';
       } else {
         const topLink = $('a').filter((_, el) => {
           const h = $(el).attr('href') || '';
@@ -565,7 +588,6 @@ export function injectForm(html, pagePath = '') {
             ${intro ? `<p class="section-sub">${intro}</p>` : ''}
           </div>
           ${tipCardsHtml ? `<div class="service-tips-grid">${tipCardsHtml}</div>` : ''}
-          ${ctaWrapperHtml ? `<div class="tips-cta-wrap text-center">${ctaWrapperHtml}</div>` : ''}
         </section>
       `;
 
@@ -589,6 +611,10 @@ export function injectForm(html, pagePath = '') {
           $(this).replaceWith(`<h3>${$(this).text().trim()}</h3>`);
         });
       }
+
+      // Remove botões residuais soltos antes e depois do formulário
+      $('.section-service-lead').nextAll('.btn-whatsapp-wrapper, .figure-img').remove();
+      $('.section-service-lead').prevAll('.btn-whatsapp-wrapper').remove();
     }
   }
 
